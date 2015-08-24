@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Home | Haxe and javascript</title>
+        <title>Code editor | Haxe and javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../haxejs/api.html" />
+    <link rel="next" href="../haxe/hello-world.html" />
     
     
-    <link rel="prev" href="../haxe/learn-haxe.html" />
+    <link rel="prev" href="../haxe/installation.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Mon Aug 24 2015 23:44:30 GMT+0200 (CEST)">
+    <div class="book" data-level="1.3" data-basepath=".." data-revision="Mon Aug 24 2015 23:44:30 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -104,7 +104,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter active" data-level="1.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
@@ -162,7 +162,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="haxejs/index.html">
+        <li class="chapter " data-level="2.1" data-path="haxejs/index.html">
             
                 
                     <a href="../haxejs/index.html">
@@ -409,36 +409,21 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="javascript-reloaded">Javascript Reloaded</h1>
-<p><strong>haxe JS</strong> is similar to Javascript, but includes new features like:</p>
-<ul>
-<li>Strong typing</li>
-<li>Type inference</li>
-<li>Packages</li>
-<li>Classes</li>
-<li>Interfaces</li>
-<li>Generics</li>
-<li>Enums</li>
-<li>Iterators</li>
-<li>Inlining</li>
-<li>Macros</li>
-</ul>
-<h1 id="cross-browser-compliant">Cross-Browser Compliant</h1>
-<p><strong>haxe JS</strong> works with current browsers&#x2014;even Internet Explorer!</p>
-<h2 id="small-footprint">Small Footprint</h2>
-<p><strong>haxe JS</strong> relies on a small 8KB (3KB zipped) standard library and only includes the classes you use in your project.</p>
-<h1 id="familiar-syntax">Familiar Syntax</h1>
-<p>New languages like CoffeeScript and Dart throw out familiar syntax for &quot;better&quot; syntax. We like ECMAscript. You can write strings, objects, arrays, functions and many other elements just like you could in Javascript.</p>
-<h2 id="code-completion">Code Completion</h2>
-<p>Ever wanted a code editor that can help think for you? <strong>haxe JS</strong> supports automatic code completion. Even when you do not type your variables, <strong>haxe JS</strong> applies type inference to provide fast and accurate feedback on every API.</p>
-<h2 id="find-errors-fast">Find Errors Fast</h2>
-<p>Through code completion, you can receive instant feedback to help prevent errors before they begin. If you still make a mistake, many errors can be discovered in your code editor, so you can find and fix errors fast, before you load the browser.</p>
-<h2 id="include-regular-javascript">Include Regular Javascript</h2>
-<p>You do not need to change everything from Javascript to <strong>haxe JS</strong>: they can work together. You can reference Javascript untyped, or have extern classes to provide code completion for Javascript written outside of <strong>haxe JS</strong>.</p>
-<h2 id="free-and-open-source">Free and Open Source</h2>
-<p><strong>haxe JS</strong> is free, and most of the libraries are MIT- or BSD-licensed. You can build non-profit or commercial projects without being encumbered by restrictive licenses, no attribution required.</p>
-<h2 id="use-popular-frameworks">Use Popular Frameworks</h2>
-<p>Using externs, <strong>haxe JS</strong> supports jQuery, and even more libraries through <code>haxelib</code>, like Enyo, Node.js, Jo or three.js.</p>
+                        <h1 id="choosing-a-code-editor">Choosing a Code Editor</h1>
+<p><em>from <a href="http://www.openfl.org/learn/resources/choosing-a-code-editor/" target="_blank">Openfl documentation</a></em></p>
+<p>Once OpenFL has been installed, it is helpful to choose an integrated development environment (IDE) with good support for Haxe and OpenFL development.</p>
+<p>Although you can write code using even a simple text editor, a quality IDE can provide code completion (code hints), shortcuts to build and test your projects, and other tools to give you a great coding experience.</p>
+<h2 id="flashdevelop">FlashDevelop</h2>
+<p><a href="http://www.flashdevelop.org" target="_blank">FlashDevelop</a> is one of the strongest IDEs for Haxe and OpenFL development. If you are a Windows user (and perhaps if you are not), we recommend that you try FlashDevelop first to get a feel for what an integrated environment looks like. Many developers prefer FlashDevelop.</p>
+<p>OpenFL includes FlashDevelop project files when you use the &quot;openfl create&quot; command for convenience. FlashDevelop is free and open-source.</p>
+<h2 id="sublime-text">Sublime Text</h2>
+<p><a href="http://www.sublimetext.com" target="_blank">Sublime Text</a> is a code editor, with support for Haxe and OpenFL using the <a href="https://github.com/clemos/haxe-sublime-bundle" target="_blank">Haxe Sublime Bundle</a>. Sublime Text is cross-platform, with support for Windows, Mac and Linux.</p>
+<p>Unlike FlashDevelop, Sublime Text does not provide accurate code completion, nor does it support &quot;projects&quot; in the traditional IDE sense. However, Sublime Text is much stronger than a simple text editor, and is a good recommendation for Mac and Linux users.</p>
+<p>Sublime Text is free-to-use, with reminders to pay for continued use.</p>
+<h2 id="intellij-idea">IntelliJ IDEA</h2>
+<p><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> is primarily marketed as a Java IDE, but it has growing support within the Haxe community, including large teams, such as TiVo. The full edition, as well as the free community edition, support the <a href="https://plugins.jetbrains.com/plugin/6873?pr=idea" target="_blank">Haxe plugin</a>, which is not easy to install, but can provide a fuller native IDE experience for Mac or Linux users.</p>
+<h2 id="other-choices">Other Choices</h2>
+<p>There are other code editors to choose from, include vim and up-and-coming Haxe-based editors. You can read more at <a href="http://haxe.org/documentation/introduction/editors-and-ides.html" target="_blank">http://haxe.org/documentation/introduction/editors-and-ides.html</a></p>
 
                     
                     </section>
@@ -449,10 +434,10 @@
         </div>
 
         
-        <a href="../haxe/learn-haxe.html" class="navigation navigation-prev " aria-label="Previous page: Learn Haxe"><i class="fa fa-angle-left"></i></a>
+        <a href="../haxe/installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../haxejs/api.html" class="navigation navigation-next " aria-label="Next page: API"><i class="fa fa-angle-right"></i></a>
+        <a href="../haxe/hello-world.html" class="navigation navigation-next " aria-label="Next page: hello world"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

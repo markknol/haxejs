@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Home | Haxe and javascript</title>
+        <title>Installation | Haxe and javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../haxejs/api.html" />
+    <link rel="next" href="../haxe/choosing-a-code-editor.html" />
     
     
-    <link rel="prev" href="../haxe/learn-haxe.html" />
+    <link rel="prev" href="../haxe/what-is-haxe.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Mon Aug 24 2015 23:44:30 GMT+0200 (CEST)">
+    <div class="book" data-level="1.2" data-basepath=".." data-revision="Mon Aug 24 2015 23:44:30 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -89,7 +89,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="haxe/installation.html">
+        <li class="chapter active" data-level="1.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
@@ -162,7 +162,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="haxejs/index.html">
+        <li class="chapter " data-level="2.1" data-path="haxejs/index.html">
             
                 
                     <a href="../haxejs/index.html">
@@ -409,37 +409,35 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="javascript-reloaded">Javascript Reloaded</h1>
-<p><strong>haxe JS</strong> is similar to Javascript, but includes new features like:</p>
+                        <h1 id="installing-haxe">Installing Haxe</h1>
+<p>First, you will need to install Haxe (and Neko).<br>There are a couple ways to install Haxe:</p>
 <ul>
-<li>Strong typing</li>
-<li>Type inference</li>
-<li>Packages</li>
-<li>Classes</li>
-<li>Interfaces</li>
-<li>Generics</li>
-<li>Enums</li>
-<li>Iterators</li>
-<li>Inlining</li>
-<li>Macros</li>
+<li>Get the <a href="#haxe">installer</a> from <a href="http://haxe.org/download/" target="_blank">haxe.org</a> (original)</li>
+<li>Use <a href="#npm">NPM</a> </li>
+<li>Use <a href="#brew">Homebrew</a></li>
+<li>Use <a href="#chocolatey">Chocolatey</a></li>
 </ul>
-<h1 id="cross-browser-compliant">Cross-Browser Compliant</h1>
-<p><strong>haxe JS</strong> works with current browsers&#x2014;even Internet Explorer!</p>
-<h2 id="small-footprint">Small Footprint</h2>
-<p><strong>haxe JS</strong> relies on a small 8KB (3KB zipped) standard library and only includes the classes you use in your project.</p>
-<h1 id="familiar-syntax">Familiar Syntax</h1>
-<p>New languages like CoffeeScript and Dart throw out familiar syntax for &quot;better&quot; syntax. We like ECMAscript. You can write strings, objects, arrays, functions and many other elements just like you could in Javascript.</p>
-<h2 id="code-completion">Code Completion</h2>
-<p>Ever wanted a code editor that can help think for you? <strong>haxe JS</strong> supports automatic code completion. Even when you do not type your variables, <strong>haxe JS</strong> applies type inference to provide fast and accurate feedback on every API.</p>
-<h2 id="find-errors-fast">Find Errors Fast</h2>
-<p>Through code completion, you can receive instant feedback to help prevent errors before they begin. If you still make a mistake, many errors can be discovered in your code editor, so you can find and fix errors fast, before you load the browser.</p>
-<h2 id="include-regular-javascript">Include Regular Javascript</h2>
-<p>You do not need to change everything from Javascript to <strong>haxe JS</strong>: they can work together. You can reference Javascript untyped, or have extern classes to provide code completion for Javascript written outside of <strong>haxe JS</strong>.</p>
-<h2 id="free-and-open-source">Free and Open Source</h2>
-<p><strong>haxe JS</strong> is free, and most of the libraries are MIT- or BSD-licensed. You can build non-profit or commercial projects without being encumbered by restrictive licenses, no attribution required.</p>
-<h2 id="use-popular-frameworks">Use Popular Frameworks</h2>
-<p>Using externs, <strong>haxe JS</strong> supports jQuery, and even more libraries through <code>haxelib</code>, like Enyo, Node.js, Jo or three.js.</p>
-
+<p>Although every install <em>should</em> work, I only worked with the installer from haxe.org
+I would advise everybody to use that one!</p>
+<p><a name="haxe"></a></p>
+<h2 id="installer-original-from-haxe-org">Installer (original) from haxe.org</h2>
+<p>Installers for different platforms can be found <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a></p>
+<p><a name="npm"></a></p>
+<h2 id="install-with-npm-node">Install with NPM (node)</h2>
+<p>Install Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<p>After installation use:</p>
+<pre><code>npm install -g haxe
+</code></pre><p><a name="brew"></a></p>
+<h2 id="install-with-homebrew">Install with Homebrew</h2>
+<p>Install Homebrew: <a href="../GLOSSARY.html#fixme" class="glossary-term" title="This needs some more info, you could help me with that!">fixme</a></p>
+<p>After installation use: (install latest from git with --HEAD)</p>
+<pre><code>brew install haxe --HEAD
+</code></pre><p><a name="chocolatey"></a></p>
+<h2 id="install-with-chocolatey">Install with chocolatey</h2>
+<p>Install Chocolatey: <a href="../GLOSSARY.html#fixme" class="glossary-term" title="This needs some more info, you could help me with that!">fixme</a></p>
+<p>After installation use:</p>
+<pre><code>choco install haxe
+</code></pre>
                     
                     </section>
                 
@@ -449,10 +447,10 @@
         </div>
 
         
-        <a href="../haxe/learn-haxe.html" class="navigation navigation-prev " aria-label="Previous page: Learn Haxe"><i class="fa fa-angle-left"></i></a>
+        <a href="../haxe/what-is-haxe.html" class="navigation navigation-prev " aria-label="Previous page: What is Haxe?"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../haxejs/api.html" class="navigation navigation-next " aria-label="Next page: API"><i class="fa fa-angle-right"></i></a>
+        <a href="../haxe/choosing-a-code-editor.html" class="navigation navigation-next " aria-label="Next page: Code editor"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
