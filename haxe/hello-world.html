@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>hello world | Haxe and javascript</title>
+        <title>Hello world | Haxe and javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="1.4" data-basepath=".." data-revision="Mon Aug 24 2015 23:44:30 GMT+0200 (CEST)">
+    <div class="book" data-level="1.4" data-basepath=".." data-revision="Tue Aug 25 2015 11:54:43 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -66,9 +66,17 @@
             
         </li>
     
-        <li class="chapter " data-level="1" >
+        <li class="chapter " data-level="1" data-path="haxe/about.html">
             
-            <span><b>1.</b> Haxe basics</span>
+                
+                    <a href="../haxe/about.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Haxe basics
+                    </a>
             
             
             <ul class="articles">
@@ -128,7 +136,7 @@
                         
                             <b>1.4.</b>
                         
-                        hello world
+                        Hello world
                     </a>
             
             
@@ -154,9 +162,17 @@
             
         </li>
     
-        <li class="chapter " data-level="2" >
+        <li class="chapter " data-level="2" data-path="haxejs/about.html">
             
-            <span><b>2.</b> Haxe and Javascript</span>
+                
+                    <a href="../haxejs/about.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Haxe and Javascript
+                    </a>
             
             
             <ul class="articles">
@@ -242,29 +258,22 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="contribute.html">
+        <li class="chapter " data-level="3" >
             
+            <span><b>3.</b> Resources</span>
+            
+            
+            <ul class="articles">
                 
-                    <a href="../contribute.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        Contribute
-                    </a>
-            
-            
-        </li>
     
-        <li class="chapter " data-level="4" >
+        <li class="chapter " data-level="3.1" >
             
                 
                     <a target="_blank" href="http:/matthijskamstra.github.io/haxenode">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>3.1.</b>
                         
                         HaxeNode
                     </a>
@@ -272,14 +281,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" >
+        <li class="chapter " data-level="3.2" >
             
                 
                     <a target="_blank" href="http:/try.haxe.org/">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>3.2.</b>
                         
                         Try Haxe!
                     </a>
@@ -287,16 +296,36 @@
             
         </li>
     
-        <li class="chapter " data-level="6" >
+        <li class="chapter " data-level="3.3" >
             
                 
                     <a target="_blank" href="https:/groups.google.com/forum/#!topic/haxelang">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>3.3.</b>
                         
                         Community
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="contribute.html">
+            
+                
+                    <a href="../contribute.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Contribute
                     </a>
             
             
@@ -410,7 +439,7 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="hello-world">Hello world</h1>
-<p>Developing Javascript code is really easy with Haxe. Let&apos;s see our first HelloWorld example :</p>
+<p>Developing Javascript code is really easy with Haxe. Let&apos;s see our first <a href="../GLOSSARY.html#helloworld" class="glossary-term" title="A &quot;Hello, World!&quot; program is a computer program that outputs &quot;Hello, World!&quot; (or some variant thereof) on a display device.">HelloWorld</a> example :</p>
 <pre><code>class Test {
     static function main() {
         trace(&quot;Hello World !&quot;);
@@ -421,6 +450,12 @@
 -main Test
 </code></pre><p>To compile open you <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
 Alternative names for the terminal:  ">terminal</a> and type</p>
+<pre><code>cd 
+</code></pre><p>and drag the folder where you saved the files, into the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a>.
+It will look something like this</p>
+<pre><code>cd /path/to/folder/
+</code></pre><p>press enter and type</p>
 <pre><code>haxe compile.hxml
 </code></pre><p>If an error occurs, it will be displayed. 
 If everything went smoothly like it should, this will produce a file named <code>test.js</code> that can be embedded into an HTML page such as this one :</p>
@@ -428,13 +463,13 @@ If everything went smoothly like it should, this will produce a file named <code
 &lt;head&gt;&lt;title&gt;Haxe JS&lt;/title&gt;&lt;/head&gt;
 &lt;body&gt;
 
-&lt;div id=&quot;haxe:trace&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;test.js&quot;&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>If you put this code into a file named <code>test.html</code> and open it with your webbrowser, it should display <em>Hello World</em> with information about the file and the line where the trace occurred. Please note that a div block is needed to display the Haxe Javascript traces.</p>
-<p><em>From <a href="http://old.haxe.org/doc/start/js" target="_blank">old.haxe.org - manual</a></em></p>
+</code></pre><p>If you put this code into a file named <code>test.html</code> and open it with your webbrowser (like Google Chrome), it should display <em>Hello World</em> in your Console.
+(Google Chrome &gt; Hamburger menu &gt; More Tools &gt; Developers tools) </p>
+<p><em>Based upon <a href="http://old.haxe.org/doc/start/js" target="_blank">old.haxe.org - manual</a></em></p>
 
                     
                     </section>
