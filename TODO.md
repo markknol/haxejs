@@ -15,9 +15,9 @@ http://old.haxe.org/doc/js/extern_libraries
 Recent write from Philippe Elsass about javascript
 http://philippe.elsass.me/2014/11/haxe-working-with-javascript-libraries/
 http://philippe.elsass.me/2014/11/vanilla-haxe-js/
+http://vanilla-js.com/
 
-Using jquery!!!!
-http://blog.onthewings.net/2010/08/03/using-jquery-in-haxe/
+
 
 
 Follow on twitter?
@@ -25,3 +25,17 @@ https://twitter.com/haxejs
 
 Franco
 http://io.pellucid.com/blog/the-benefits-of-transpiling-to-javascript
+
+
+https://www.patreon.com/posts/2740520
+
+
+
+
+NPM
+
+cd /path/to/folder
+npm install
+grunt watch
+
+change files and everything will be build automaticly 
