@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Haxe and Javascript | Haxe and javascript</title>
+        <title>Example DOM | Haxe and javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../haxejs/index.html" />
+    <link rel="next" href="../02dom/example.html" />
     
     
-    <link rel="prev" href="../haxe/learn-haxe.html" />
+    <link rel="prev" href="../01jquery/example.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="Thu Aug 27 2015 22:39:51 GMT+0200 (CEST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Thu Aug 27 2015 22:39:51 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -147,7 +147,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="haxejs/about.html">
+        <li class="chapter " data-level="2" data-path="haxejs/about.html">
             
                 
                     <a href="../haxejs/about.html">
@@ -300,7 +300,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="02dom/about.html">
+        <li class="chapter active" data-level="5" data-path="02dom/about.html">
             
                 
                     <a href="../02dom/about.html">
@@ -531,13 +531,24 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="about-haxejs">About haxejs</h1>
-<p><img src="../img/haxe_javascript_logos.png" alt="Haxe logo"></p>
-<p>There used to be a website (really old, when Haxe was spelled &quot;haXe&quot;) that got you started.</p>
-<p>But that is no more. So I decided to get some of that back.
-Based upon the information from the old site and my own need to document this.</p>
-<p>I will update the information to current use of Haxe and Javascript. </p>
-<p>The original data is found with <a href="https://web.archive.org/web/20130917142452/http://www.haxejs.org/externs" target="_blank">WayBack Machine</a> </p>
+                        <h1 id="what-is-the-document-object-model-dom">What is the Document Object Model (<a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
+It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a>)?</h1>
+<p>The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page.</p>
+<p><em>source <a href="http://www.w3.org/DOM/" target="_blank">http://www.w3.org/DOM/</a></em></p>
+<h2 id="why-is-this-important">Why is this important?</h2>
+<p>If you want to minipulate a html page you need to wait untill the <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
+It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> is loaded completely, before you can change things.
+Otherwise there is a chance that you will change something that isn&apos;t loaded yet.</p>
+<h2 id="jquery-and-vanillajs">jQuery and <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJs</a></h2>
+<p>There are two flavours you can use to find out if the <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
+It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> is ready</p>
+<ul>
+<li>the popular jQuery </li>
+<li>and the much discussed <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJs</a> version</li>
+</ul>
+<h2 id="don-t-work-with-ie8">Don&apos;t work with IE8</h2>
+<p>Just doesn&apos;t work!
+<a href="http://caniuse.com/#search=DOMContentLoaded" target="_blank">http://caniuse.com/#search=DOMContentLoaded</a></p>
 
                     
                     </section>
@@ -548,10 +559,10 @@ Based upon the information from the old site and my own need to document this.</
         </div>
 
         
-        <a href="../haxe/learn-haxe.html" class="navigation navigation-prev " aria-label="Previous page: Learn Haxe"><i class="fa fa-angle-left"></i></a>
+        <a href="../01jquery/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../haxejs/index.html" class="navigation navigation-next " aria-label="Next page: Home"><i class="fa fa-angle-right"></i></a>
+        <a href="../02dom/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

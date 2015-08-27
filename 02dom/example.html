@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Haxe and Javascript | Haxe and javascript</title>
+        <title>How to | Haxe and javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../haxejs/index.html" />
+    <link rel="next" href="../contribute.html" />
     
     
-    <link rel="prev" href="../haxe/learn-haxe.html" />
+    <link rel="prev" href="../02dom/about.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="Thu Aug 27 2015 22:39:51 GMT+0200 (CEST)">
+    <div class="book" data-level="5.1" data-basepath=".." data-revision="Thu Aug 27 2015 22:39:51 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -147,7 +147,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="haxejs/about.html">
+        <li class="chapter " data-level="2" data-path="haxejs/about.html">
             
                 
                     <a href="../haxejs/about.html">
@@ -316,7 +316,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.1" data-path="02dom/example.html">
+        <li class="chapter active" data-level="5.1" data-path="02dom/example.html">
             
                 
                     <a href="../02dom/example.html">
@@ -531,14 +531,67 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="about-haxejs">About haxejs</h1>
-<p><img src="../img/haxe_javascript_logos.png" alt="Haxe logo"></p>
-<p>There used to be a website (really old, when Haxe was spelled &quot;haXe&quot;) that got you started.</p>
-<p>But that is no more. So I decided to get some of that back.
-Based upon the information from the old site and my own need to document this.</p>
-<p>I will update the information to current use of Haxe and Javascript. </p>
-<p>The original data is found with <a href="https://web.archive.org/web/20130917142452/http://www.haxejs.org/externs" target="_blank">WayBack Machine</a> </p>
+                        <h1 id="example-dom-ready">Example <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
+It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> ready</h1>
+<p>This is an <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
+It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> ready example, the example use two methodes (jQuery and <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a>).
+Check <a href="https://learn.jquery.com/using-jquery-core/document-ready/" target="_blank">document-ready using jQuery</a></p>
+<h2 id="how-to-start">How to start</h2>
+<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - javascript.hxml
+</code></pre><h2 id="install">Install</h2>
+<p>If you are going to use the VinillaJS version, you don&apos;t have to do anything...</p>
+<p>But the use of jQuery you can install it using the command:</p>
+<pre><code>haxelib install jQueryExtern
+</code></pre><p>and then add <code>-lib jQueryExtern</code> in the <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>.</p>
+<h2 id="the-main-hx">The Main.hx</h2>
+<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder. </p>
+<p><strong>jQuery</strong></p>
+<pre><code>$( document ).ready(function() {
+    console.log( &quot;ready!&quot; );
+});
+</code></pre><p><strong>jQuery Externs</strong></p>
+<pre><code>new JQuery(js.Browser.document).ready ( function (){
+    trace( &quot;Jquery DOM ready (somewhat simular to original jQuery way)&quot;);
+    new JQuery(&quot;.container&quot;).append(&quot;&lt;p&gt;Jquery DOM ready (somewhat simular to original jQuery way)&lt;/p&gt;&quot;);
+});
+</code></pre><p>or</p>
+<p><strong>jQuery</strong></p>
+<pre><code>// Shorthand for $( document ).ready()
+$(function() {
+    console.log( &quot;ready!&quot; );
+});
+</code></pre><p><strong>jQuery Externs</strong></p>
+<pre><code>new JQuery( function():Void { 
+    trace( &quot;Jquery DOM ready (easy way)&quot;);
+    new JQuery(&quot;.container&quot;).append(&quot;&lt;p&gt;Jquery DOM ready (easy way)&lt;/p&gt;&quot;);
+});
+</code></pre><p>Now try the <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a> version:</p>
+<pre><code>var document = js.Browser.document;
+document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) { 
+    trace(&quot;VanillaJs DOM ready&quot;);
 
+    var p = document.createParagraphElement();
+    p.innerText = &apos;VanillaJs DOM ready&apos;;
+
+    document.querySelector(&quot;.container&quot;).appendChild(p);
+});
+</code></pre><h2 id="cdn"><a href="../GLOSSARY.html#cdn" class="glossary-term" title="A content delivery network or content distribution network (CDN) is a large distributed system of servers deployed in multiple data centers across the Internet.">CDN</a></h2>
+<p>Remember jQueryExtern is simply an extern, you have to link jQuery in your html file.</p>
+<p>You can download the javascript file from <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> or use <a href="../GLOSSARY.html#cdn" class="glossary-term" title="A content delivery network or content distribution network (CDN) is a large distributed system of servers deployed in multiple data centers across the Internet.">CDN</a>.
+For this example we will use that</p>
+<p>Copy this in the <code>&lt;head&gt;</code> or at the bottom of your <code>&lt;body&gt;</code>:</p>
+<pre><code>&lt;!-- from jQuery&apos;s CDN (http://jquery.com/download/#using-jquery-with-a-cdn) --&gt;
+&lt;script src=&quot;http://code.jquery.com/jquery-2.1.4.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Your Haxe compiled script --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;Main.js&quot;&gt;&lt;/script&gt;
+</code></pre>
                     
                     </section>
                 
@@ -548,10 +601,10 @@ Based upon the information from the old site and my own need to document this.</
         </div>
 
         
-        <a href="../haxe/learn-haxe.html" class="navigation navigation-prev " aria-label="Previous page: Learn Haxe"><i class="fa fa-angle-left"></i></a>
+        <a href="../02dom/about.html" class="navigation navigation-prev " aria-label="Previous page: Example DOM"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../haxejs/index.html" class="navigation navigation-next " aria-label="Next page: Home"><i class="fa fa-angle-right"></i></a>
+        <a href="../contribute.html" class="navigation navigation-next " aria-label="Next page: Contribute"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
