@@ -20,6 +20,10 @@
         
     <link rel="stylesheet" href="gitbook/style.css">
     
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-edit-link/plugin.css">
+        
+    
     
 
         
@@ -34,7 +38,7 @@
     <body>
         
         
-    <div class="book" data-level="9" data-basepath="." data-revision="Sat Aug 29 2015 11:41:11 GMT+0200 (CEST)">
+    <div class="book" data-level="9" data-basepath="." data-revision="Sat Aug 29 2015 23:14:03 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -616,7 +620,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="help">Help!</h1>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/contribute.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="help">Help!</h1>
 <p><img src="http://lorempixel.com/800/200/technics/HELP/" alt="HELP"></p>
 <p><em>or perhaps better</em></p>
 <h1 id="contribute">Contribute!</h1>
@@ -707,9 +711,13 @@ Writing documentation is very similar to writing a book.</p>
         
 <script src="gitbook/app.js"></script>
 
+    
+    <script src="gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"edit-link":{"base":"https://github.com/MatthijsKamstra/haxejs/blob/master/","label":""}};
     gitbook.start(config);
 });
 </script>
