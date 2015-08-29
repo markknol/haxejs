@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Externs | Haxe and Javascript</title>
+        <title>Example VanillaJS | Haxe and Javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../00helloworld/about.html" />
+    <link rel="next" href="../03vanillajs/example.html" />
     
     
-    <link rel="prev" href="../haxejs/download.html" />
+    <link rel="prev" href="../02dom/example.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2.4" data-basepath=".." data-revision="Sat Aug 29 2015 11:41:11 GMT+0200 (CEST)">
+    <div class="book" data-level="6" data-basepath=".." data-revision="Sat Aug 29 2015 11:41:11 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -208,7 +208,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="haxejs/externs.html">
+        <li class="chapter " data-level="2.4" data-path="haxejs/externs.html">
             
                 
                     <a href="../haxejs/externs.html">
@@ -336,7 +336,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="03vanillajs/about.html">
+        <li class="chapter active" data-level="6" data-path="03vanillajs/about.html">
             
                 
                     <a href="../03vanillajs/about.html">
@@ -618,72 +618,33 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="your-favorites-extended">Your Favorites, Extended</h1>
-<p><strong>Haxe JS</strong> externs make it possible to extend Javascript libraries with code completion and other neat features.</p>
-<p>Please feel free and choose one of the libraries to learn more about how <strong>Haxe JS</strong> can improve your everyday workflow.</p>
-<h2 id="haxelib">haxelib</h2>
-<p>Most of the externs listed here are available using &quot;haxelib&quot;, the package manager for <strong>Haxe</strong>.</p>
-<p>You can easily install a library located on haxelib using the &quot;install&quot; command, like this:</p>
-<pre><code>haxelib install jQueryExtern  
-haxelib install beanhx  
-</code></pre><h2 id="writing-your-own">Writing Your Own</h2>
-<p>Making your own externs is pretty simple. If a framework uses the traditional prototypical inheritance structure for Javascript, like Jo, it can be very simple to create externs.</p>
-<p>Frameworks that use a different model, like a class factory, may be harder to map using externs, but it certainly is possible. <strong>Haxe JS</strong> was designed to be flexible to help you work with any library.</p>
-<p>There are a lot of great JavaScript libraries out there. This document explains how to use them with Haxe.</p>
-<p>Take, for example, this JavaScript code that hides and shows a <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
-It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> element by changing its CSS class:</p>
-<pre><code>function DisplayToggle(id) {
-    this.el = document.getElementById(id);
-    this.el.className = &quot;visible&quot;;
-    this.visible = true;
-}
-DisplayToggle.prototype.hide = function() {
-    this.el.className = &quot;hidden&quot;;
-    this.visible = false;
-}
-DisplayToggle.prototype.show = function() {
-    this.el.className = &quot;visible&quot;;
-    this.visible = true;
-}
-</code></pre><p>Save this file as: <code>DisplayToggle.js</code>.</p>
-<h3 id="using-extern-class">Using: extern class</h3>
-<p>This is the most elegant way, because it is clean and type-safe.
-We create a Haxe file which defines the functions of our external JavaScript library. The extern keywords tells the compiler that the implementation of this class will be available at runtime.</p>
-<pre><code>package ;
-extern class DisplayToggle {
-    public function new(id:String):Void;
-    public function hide():Void;
-    public function show():Void;
-    public var visible(default,null):Bool;
-}
-</code></pre><p>Save this code as <code>DisplayToggle.hx</code>.</p>
-<p>Now we can use our external JavaScript directly within Haxe. If you use an IDE with autocompletion you will even get autocompletion using this class.</p>
-<p>Make sure that the <code>DisplayToggle.js</code> is embeded in your HTML file before you add your Haxe generated JavaScript file.</p>
-<h3 id="using-untyped">Using: untyped</h3>
-<p>Warning: This is not type-safe. Use this method only if you are quite sure about what you are doing.
-Somewhere in your Haxe code:</p>
-<pre><code>class Main {
-    static function main() {
-        var dis:Dynamic = untyped __js__(&apos;new DisplayToggle(&quot;some_id&quot;)&apos;);
-        dis.hide();
-    }
-}
-</code></pre><p>The <strong>js</strong> function will directly forward the argument string to the generated JavaScript. You can read more about this on the Haxe magic page
-This way you will get no autocompletion or errors if you try to access a property or function that does not exists.<br>Also make sure that the <code>DisplayToggle.js</code> is embeded in you HTML before your haxe-generated JavaScript file.</p>
-<h3 id="packages">Packages</h3>
-<p>Some notes about the Haxe package structure. Lets say we have the following file:</p>
-<pre><code>package foo.bar;
-class FooBar {
-    public function new() {
-        // some code
-    }
-}
-</code></pre><p>This class will be compiled to a JavaScript object similar to this:</p>
-<pre><code>foo.bar.FooBar = function() {
-    //some code
-}
-</code></pre><p>So if your external library is structured this way you have to recreate the package structure within Haxe.</p>
-<p>You may also map your package structure to the external library structure using <code>@:native</code> compiler metadata.</p>
+                        <h1 id="about-vanillajs">About <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJs</a></h1>
+<p><a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a> is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.</p>
+<p>Here&apos;s a funny site that jokingly talks about this: <a href="">http://vanilla-js.com/</a></p>
+<hr>
+<p>Okay we have seen the power of jQuery, but more and more developers choose work with the <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
+It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> directly.
+And when you work with Haxe everything will be awesome.
+Javascript is a strange puppy, and with the help of Haxe you can make sense of it.
+When you are used to using jQuery a lot, you really don&apos;t know what is going on in javascript.
+So I decide to write a little about this.</p>
+<p><strong>I am not against jQuery, I use it a lot. </strong></p>
+<hr>
+<h2 id="philippe-elsass">Philippe Elsass</h2>
+<p>The first one who wrote about <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a> in combination with Haxe is Philippe Elsass (also known as the FlashDevelop guy)<br>It&apos;s a really interesting article and I suggest you read it</p>
+<ul>
+<li><a href="">http://philippe.elsass.me/2014/11/vanilla-haxe-js/</a></li>
+</ul>
+<p>This is an awesome document explaining how it works in Haxe.
+You can download the code at <a href="https://github.com/elsassph/vanilla-haxe-js" target="_blank">https://github.com/elsassph/vanilla-haxe-js</a>.</p>
+<h2 id="resources">Resources</h2>
+<p>Read something more about the jQuery vs <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a> discussion</p>
+<ul>
+<li><a href="">http://youmightnotneedjquery.com/</a></li>
+<li><a href="">http://tutorialzine.com/2014/06/10-tips-for-writing-javascript-without-jquery/</a></li>
+<li><a href="">http://blog.garstasio.com/you-dont-need-jquery/</a></li>
+<li><a href="">http://www.sitepoint.com/do-you-really-need-jquery/</a></li>
+</ul>
 
                     
                     </section>
@@ -694,10 +655,10 @@ class FooBar {
         </div>
 
         
-        <a href="../haxejs/download.html" class="navigation navigation-prev " aria-label="Previous page: Download"><i class="fa fa-angle-left"></i></a>
+        <a href="../02dom/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World"><i class="fa fa-angle-right"></i></a>
+        <a href="../03vanillajs/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
