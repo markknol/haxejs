@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>How to | Haxe and Javascript</title>
+        <title>Example pixi.js | Haxe and Javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../02dom/about.html" />
+    <link rel="next" href="../07pixi/example.html" />
     
     
-    <link rel="prev" href="../01jquery/about.html" />
+    <link rel="prev" href="../06nasa/example.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Sun Aug 30 2015 13:42:44 GMT+0200 (CEST)">
+    <div class="book" data-level="9" data-basepath=".." data-revision="Sun Aug 30 2015 13:42:44 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -284,7 +284,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="01jquery/example.html">
+        <li class="chapter " data-level="4.1" data-path="01jquery/example.html">
             
                 
                     <a href="../01jquery/example.html">
@@ -448,7 +448,7 @@
             
         </li>
     
-        <li class="chapter " data-level="9" data-path="07pixi/about.html">
+        <li class="chapter active" data-level="9" data-path="07pixi/about.html">
             
                 
                     <a href="../07pixi/about.html">
@@ -694,104 +694,14 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/01jquery/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-jquery">Example jQuery</h1>
-<p>Check the <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/01jquery/code" target="_blank">code folder</a> for more comments.</p>
-<p>This is an jQuery example, the example are taken from the hompage of <a href="http://jquery.com/" target="_blank">http://jquery.com/</a>.</p>
-<p><strong>Quick reminder:</strong></p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/07pixi/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-pixi-js">About Pixi.js</h1>
+<p>One of the more popular libraries today is <a href="https://github.com/pixijs/pixi.js" target="_blank">pixi.js</a>.</p>
 <blockquote>
-<p>Haxe does not allow using <code>$</code> as a class name or a function name, but <code>$</code> is just a short-hand to jQuery.<br>However, Haxe requires all class names start with capital letter, so it is JQuery not jQuery.   </p>
+<p>Super fast HTML 5 2D rendering engine that uses webGL with canvas fallback</p>
 </blockquote>
-<p>So in short: you replace <code>$(...)</code> with <code>new JQuery(...)</code> and it will work fine.</p>
-<p><em>Read more about this <a href="about.html">here</a></em></p>
-<h2 id="how-to-start">How to start</h2>
-<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
-See example below:</p>
-<pre><code>+ foobar
-    + bin
-    + src
-        - Main.hx
-    - javascript.hxml
-</code></pre><h2 id="install">Install</h2>
-<p>Since its put on haxelib, you can install it using the command:</p>
-<pre><code>haxelib install jQueryExtern
-</code></pre><p>and then add <code>-lib jQueryExtern</code> in the <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>.</p>
-<h2 id="the-main-hx">The Main.hx</h2>
-<p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder. </p>
-<h3 id="dom-traversal-and-manipulation"><a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
-It is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents. The document can be further processed and the results of that processing can be incorporated back into the presented page. ">DOM</a> Traversal and Manipulation</h3>
-<p>Get the <code>&lt;button&gt;</code> element with the class &apos;continue&apos; and change it&apos;s HTML to &apos;Next Step...&apos;</p>
-<pre><code>new JQuery( &quot;button.continue&quot; ).html( &quot;Next Step...&quot; );
-</code></pre><h3 id="event-handling">Event Handling</h3>
-<p>Show the <code>#banner-message</code> element that is hidden with  <code>display:none</code> in it&apos;s CSS when any button in <code>#button-container</code> is clicked.</p>
-<pre><code>var hiddenBox = new JQuery( &quot;#banner-message&quot; );
-new JQuery( &quot;#button-container button&quot; ).on( &quot;click&quot;, function( event ) {
-    hiddenBox.show();
-});
-</code></pre><h3 id="ajax">Ajax</h3>
-<p>Another change you should be looking for: <code>$.</code> is a static that should be replaced with <code>JQuery._static.</code> </p>
-<p>Thanks for NASA for suppling this awesome (no api-key needed) API. It&apos;s fun to use and extremly fun to use</p>
-<p>Call a local script on the server <code>https://api.nasa.gov/planetary/earth/imagery</code> with the query parameter <code>lon, lat, date, cloud_score, api_key</code> and replace the element <code>#nasa-container</code>&apos;s html with the returned text.</p>
-<pre><code>// Ajax
-JQuery._static.ajax({
-    url: &quot;https://api.nasa.gov/planetary/earth/imagery&quot;,
-    data: {
-        lon : 100.75,
-        lat : 1.5,
-        date : &quot;2014-02-01&quot;,
-        cloud_score: &quot;True&quot;,
-        api_key : &quot;DEMO_KEY&quot;
-    },
-    success: function( data ) {
-        new JQuery( &quot;#nasa-container&quot; ).html( &quot;&lt;img src=&apos;&quot; + data.url + &quot;&apos; alt=&apos;test&apos; &gt;&quot; );
-    }
-});
-</code></pre><p>So, when you code in JS like:</p>
-<pre><code>$(&quot;#myMightyDiv&quot;).hide();
-</code></pre><p>now you do the same in haXe:</p>
-<pre><code>new JQuery(&quot;#myMightyDiv&quot;).hide();
-</code></pre><p>Simple.</p>
-<p>It is same as how you use jQuery in JS. But instead of <code>$</code>, you refer jQuery as <code>JQuery</code>.</p>
-<p>eg. Hiding all li object:</p>
-<pre><code>new JQuery(&quot;li&quot;).hide(); //same as $(&quot;li&quot;).hide() in JS
-</code></pre><p>Static methods of jQuery can be accessed from JQuery._static.</p>
-<p>eg. A ajax example:</p>
-<pre><code class="lang-`">JQuery._static.get(&quot;ajax/test.html&quot;, function(data) {
-    js.Lib.alert(data);
-});
-</code></pre>
-<h2 id="the-haxe-build-file-javascript-hxml">The Haxe build file, javascript.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
-<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
-These arguments can also be placed into a text file of one per line with the extension <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>. This file can then be passed directly to the Haxe compiler as a build script.</p>
-<pre><code># // javascript.hxml
--lib jQueryExtern
--cp src
--main Main
--js bin/example.js
--dce full
-</code></pre><h2 id="build-js-with-haxe">Build js with Haxe</h2>
-<p>To finish and see what we have, build the file and see the result</p>
-<ol>
-<li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
-Alternative names for the terminal:  ">terminal</a></li>
-<li><code>cd</code> to the correct folder where you have saved the <code>javascript.hxml</code> </li>
-<li>type <code>haxe javascript.hxml</code></li>
-<li>press enter</li>
-</ol>
-<p>You could build everything directly in the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
-Alternative names for the terminal:  ">terminal</a>.</p>
-<pre><code>haxe -lib jQueryExtern -cp src -main Main -js bin/example.js -dce full
-</code></pre><p>It will have the same result</p>
-<h2 id="cdn"><a href="../GLOSSARY.html#cdn" class="glossary-term" title="A content delivery network or content distribution network (CDN) is a large distributed system of servers deployed in multiple data centers across the Internet.">CDN</a></h2>
-<p>Remember jQueryExtern is simply an extern, you have to link jQuery in your html file.</p>
-<p>You can download the javascript file from <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> or use <a href="../GLOSSARY.html#cdn" class="glossary-term" title="A content delivery network or content distribution network (CDN) is a large distributed system of servers deployed in multiple data centers across the Internet.">CDN</a>.
-For this example we will use that</p>
-<p>Copy this in the <code>&lt;head&gt;</code> or at the bottom of your <code>&lt;body&gt;</code>:</p>
-<pre><code>&lt;!-- from jQuery&apos;s CDN (http://jquery.com/download/#using-jquery-with-a-cdn) --&gt;
-&lt;script src=&quot;http://code.jquery.com/jquery-2.1.4.min.js&quot;&gt;&lt;/script&gt;
+<p>To access that sweetness we will be using externs (read more about externs <a href="../05externs/about.html">here</a> and <a href="../01jquery/example.html">here</a>)</p>
+<p>The externs are written and mantained by <a href="http://lib.haxe.org/p/pixijs/" target="_blank">Adi Reddy Mora aka adireddy</a></p>
 
-&lt;!-- Your Haxe compiled script --&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;Main.js&quot;&gt;&lt;/script&gt;
-</code></pre>
                     
                     </section>
                 
@@ -801,10 +711,10 @@ For this example we will use that</p>
         </div>
 
         
-        <a href="../01jquery/about.html" class="navigation navigation-prev " aria-label="Previous page: Example jQuery"><i class="fa fa-angle-left"></i></a>
+        <a href="../06nasa/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../02dom/about.html" class="navigation navigation-next " aria-label="Next page: Example DOM"><i class="fa fa-angle-right"></i></a>
+        <a href="../07pixi/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
