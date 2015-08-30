@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="7.1" data-basepath=".." data-revision="Sun Aug 30 2015 13:42:44 GMT+0200 (CEST)">
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Sun Aug 30 2015 14:05:52 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -740,8 +740,21 @@ extern class MyJSClass {
 }
 </code></pre><h2 id="index-html">index.html</h2>
 <p>Now we have to adjust the index.html</p>
-<pre><code>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Haxe JS - Externs example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
 
+&lt;div class=&quot;container&quot;&gt;Check your console.log&lt;/div&gt;
+
+&lt;!-- the original javasript file --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;foobar.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Your Haxe compiled script --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;example.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre><hr>
 <h2 id="the-haxe-build-file-javascript-hxml">The Haxe build file, javascript.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
 <p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
