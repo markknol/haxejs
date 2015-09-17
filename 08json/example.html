@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Example jQuery | Haxe and Javascript</title>
+        <title>How to | Haxe and Javascript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../01jquery/example.html" />
+    <link rel="next" href="../follow.html" />
     
     
-    <link rel="prev" href="../00helloworld/example.html" />
+    <link rel="prev" href="../08json/about.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="4" data-basepath=".." data-revision="Thu Sep 17 2015 21:39:52 GMT+0200 (CEST)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Thu Sep 17 2015 21:39:52 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -268,7 +268,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4" data-path="01jquery/about.html">
+        <li class="chapter " data-level="4" data-path="01jquery/about.html">
             
                 
                     <a href="../01jquery/about.html">
@@ -500,7 +500,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="10.1" data-path="08json/example.html">
+        <li class="chapter active" data-level="10.1" data-path="08json/example.html">
             
                 
                     <a href="../08json/example.html">
@@ -730,48 +730,117 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/01jquery/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-haxe-and-jquery">About Haxe and jQuery</h1>
-<p>You can&apos;t say javascript and NOT mention <a href="http://jquery.com/" target="_blank">jQuery</a>.</p>
-<p>So how will that work with Haxe?</p>
-<p>Okay here it gets difficult, so if you don&apos;t want to be confused, press <a href="#jquery">here to jump to the difference</a></p>
-<hr>
-<h2 id="it-s-complicated">It&apos;s complicated</h2>
-<p>In the Haxe compiler the jQuery externs are embedded.
-Nothing to do here, you would think</p>
-<pre><code>http://api.haxe.org/js/JQuery.html
-</code></pre><p>But it&apos;s based upon the jQuery version 1.6.4 and incomplete.</p>
-<p>That ticked off Andi Li and he wrote the jQuery externs who are up-to-date with the jQuery version 1.11.3 / 2.1.4. Requires Haxe 3.1.0+.</p>
-<pre><code>https://github.com/andyli/jQueryExternForHaxe
-</code></pre><p>But recently something changed: Andy started working for the HaxeFoundation
-And his work on the jQueryExterns are being joined into the compiler...
-I can&apos;t find out when will happen, but it will ... Starting form Haxe 3.3.+</p>
-<p>Till that time I will be talking about the jQueryExtern till something changes</p>
-<hr>
-<p><a name="jquery"></a></p>
-<h2 id="using-the-jquery-classes">Using the jQuery classes</h2>
-<p>There is some difference between how you use jQuery and the jQuery extern.</p>
-<p>For a typical JS starting point with jQuery, you write:</p>
-<pre><code class="lang-`">$(function(){
-    //do your magic
-});
-</code></pre>
-<p>If you don&#x2019;t know, it&#x2019;s a short-hand that bind your magic codes to the document ready event, same as you write:</p>
-<pre><code>$(document).ready(function(){
-    //do your magic
-});
-</code></pre><p>Haxe does not allow using <code>$</code> as a class name or a function name, but <code>$</code> is just a short-hand to jQuery.<br>However, Haxe requires all class names start with capital letter, so it is JQuery not jQuery.<br>You start your Haxe/JS codes using the jQuery extern as following:</p>
-<pre><code>import jQuery.*;
-
-class Main {
-    static public function main():Void {
-        new JQuery(function():Void { //when document is ready
-            //your magic
-        });
-    }
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/08json/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-json">Example json</h1>
+<p>I have created the <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/08json/code/bin/assets/users.json" target="_blank">user.json</a> with <a href="http://jsonplaceholder.typicode.com/users" target="_blank">http://jsonplaceholder.typicode.com/users</a>.</p>
+<p>Check the <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/08json/code" target="_blank">code folder</a> for more comments.</p>
+<p>In this example we are going to use <a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a> and read and use a <code>.json</code> file.</p>
+<h2 id="how-to-start">How to start</h2>
+<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - javascript.hxml
+</code></pre><h2 id="the-main-hx">The Main.hx</h2>
+<p>This example is getting to big to post here, so if you want to check out the complete file go and check out <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/08json/code/Main.hx" target="_blank">Main.hx</a> </p>
+<p>So the first part of this code is loading the <code>json</code> file. We use <a href="http://api.haxe.org/haxe/Http.html" target="_blank">http://api.haxe.org/haxe/Http.html</a> for that:</p>
+<pre><code>var req = new haxe.Http(&apos;assets/users.json&apos;);
+req.onData = function (data : String)
+{
+    Browser.alert(&apos;data: $data&apos;);
 }
-</code></pre><p>It seems to be a few lines more than JS, but you should already know, the extra lines are the same for all other haxe targets, it&apos;s how Haxe program starts.<br>The main point is <code>new JQuery(...)</code> which is the same as <code>$(...)</code> in JS.</p>
-<h2 id="using-jquery-in-haxe">Using jQuery in Haxe</h2>
-<p>This tutorial is based upon the first post from Andi about jQueryExterns: <a href="http://blog.onthewings.net/2010/08/03/using-jquery-in-haxe/" target="_blank">http://blog.onthewings.net/2010/08/03/using-jquery-in-haxe/</a></p>
+req.onError = function (error)
+{
+    Browser.alert(&apos;error: $error&apos;);
+}
+req.request(true);
+</code></pre><p>convert data (String) to a <code>json</code> file:
+<a href="http://api.haxe.org/haxe/Json.html" target="_blank">http://api.haxe.org/haxe/Json.html</a></p>
+<pre><code>    // Browser.alert(&apos;data: $data&apos;);
+    _json = haxe.Json.parse(data);
+</code></pre><p>And then it&apos;s possible to convert the <code>json</code> to usable input:</p>
+<pre><code>for (i in 0 ... _json.length)
+{
+    var _user = _json[i];
+    trace ( &quot;Name: &quot; + _user.name );
+}
+</code></pre><p>To make that easier I use <a href="http://haxe.org/manual/type-system-typedef.html" target="_blank"><code>typedef</code></a></p>
+<p>We convert the json data to <code>User</code> so when we use a IDE it will use autocompletion</p>
+<pre><code>typedef User = 
+{
+    var id : Int; // 1
+    var name : String; // Leanne Graham
+    var username : String; // Bret
+    var email : String; // Sincere@april.biz
+    var address : {
+          var street : String; // Kulas Light
+          var suite : String; // Apt. 556
+          var city : String; // Gwenborough
+          var zipcode : String; // 92998-3874
+          var geo : {
+            var lat : String; // -37.3159
+            var lng : String; // 81.1496
+          };
+    };
+    var phone : String; // 1-770-736-8031 x56442
+    var website : String; // hildegard.org
+    var company : {
+          var name : String; // Romaguera-Crona
+          var catchPhrase : String; // Multi-layered client-server neural-net
+          var bs : String; // harness real-time e-markets
+    };
+}
+</code></pre><h2 id="index-html">index.html</h2>
+<p>I have used a more extensive <code>index.html</code> in the <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/08json/code" target="_blank">code folder</a>, but you could work with this minimal version:</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Haxe JS - json example&lt;/title&gt;&lt;/head&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            .user {
+                background-color: silver;
+                margin: 10px;
+                padding: 10px;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Your Haxe compiled script --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;example.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="neko-web-server">Neko Web Server</h2>
+<p>We will use a not often mentioned feature from Haxe.</p>
+<p>You can run a webserver : <a href="http://old.haxe.org/doc/start/neko#using-the-neko-development-webserver-to-serve-http-requests-whose-contents-are-generated-by-haxe" target="_blank">Neko Web Server</a></p>
+<p>And the cool part is: <strong>You don&apos;t have to install anything if you already have Haxe installed.</strong></p>
+<p>You need the path to your files (so replace <code>path/to/files</code> with your own path)<br><em>example:</em> <code>path/to/files/haxejs/07pixi/code/bin/</code></p>
+<pre><code>nekotools server -p 2000 -h localhost -d path/to/files
+</code></pre><p>and open your browser to <a href="http://localhost:2000" target="_blank">http://localhost:2000</a></p>
+<h2 id="the-haxe-build-file-javascript-hxml">The Haxe build file, javascript.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
+<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
+These arguments can also be placed into a text file of one per line with the extension <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>. This file can then be passed directly to the Haxe compiler as a build script.</p>
+<pre><code># // javascript.hxml
+-cp src
+-main Main
+-js bin/example.js
+-dce full
+</code></pre><h2 id="build-js-with-haxe">Build js with Haxe</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a></li>
+<li><code>cd</code> to the correct folder where you have saved the <code>javascript.hxml</code> </li>
+<li>type <code>haxe javascript.hxml</code></li>
+<li>press enter</li>
+</ol>
+<p>You could build everything directly in the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a>.</p>
+<pre><code>haxe -cp src -main Main -js bin/example.js -dce full
+</code></pre><p>It will have the same result</p>
+<p>Checkout this old try.haxe example:
+<a href="http://try.haxe.org/#bfAe8" target="_blank">http://try.haxe.org/#bfAe8</a></p>
 
                     
                     </section>
@@ -782,10 +851,10 @@ class Main {
         </div>
 
         
-        <a href="../00helloworld/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
+        <a href="../08json/about.html" class="navigation navigation-prev " aria-label="Previous page: Example Json"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../01jquery/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
+        <a href="../follow.html" class="navigation navigation-next " aria-label="Next page: Who to follow"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
