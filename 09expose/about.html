@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Example Externs | Haxe and JavaScript</title>
+        <title>Example @:expose | Haxe and JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../05externs/example.html" />
+    <link rel="next" href="../09expose/example.html" />
     
     
-    <link rel="prev" href="../03vanillajs/example.html" />
+    <link rel="prev" href="../08json/example.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="8" data-basepath=".." data-revision="Fri Oct 23 2015 22:27:38 GMT+0200 (CEST)">
+    <div class="book" data-level="12" data-basepath=".." data-revision="Fri Oct 23 2015 22:27:38 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -391,7 +391,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="8" data-path="05externs/about.html">
+        <li class="chapter " data-level="8" data-path="05externs/about.html">
             
                 
                     <a href="../05externs/about.html">
@@ -535,7 +535,7 @@
             
         </li>
     
-        <li class="chapter " data-level="12" data-path="09expose/about.html">
+        <li class="chapter active" data-level="12" data-path="09expose/about.html">
             
                 
                     <a href="../09expose/about.html">
@@ -796,33 +796,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/05externs/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-generating-externs">About generating externs</h1>
-<p>If you need to readup on this subject I would suggest you read <a href="../haxejs/externs.html">Your Favorites, Extended</a>.
-It explains what externs are, how they work, etc.</p>
-<h2 id="warning">Warning</h2>
-<p>Although its possible to generate JavaScript externs I would advice to google first if someone did the heavy lifting already. Google <strong>haxelib nameOfTheLib</strong> or <strong>haxe nameOfTheLib</strong></p>
-<p>And as a last warning I quote Phillippe Elsass:</p>
-<blockquote>
-<p>But how do you write externs for complex libraries if they doesn&#x2019;t exist already? Sadly the answer is: with great courage, patience and a lot of free time... Although it is possible to fully automate the process, it is more often entirely manual.
-I won&#x2019;t recommend you to jump right away on creating externs for a big JS library out there, especially if you aren&#x2019;t an experienced and motivated Haxe developer: creating and keeping up to date such definitions require dedication; there is nothing more frustrating that discovering out of date (or incorrect) ones.</p>
-</blockquote>
-<h2 id="automated-proces">Automated proces</h2>
-<p>The awesome <a href="http://www.openfl.org/" target="_blank">Openfl</a> developer <a href="http://www.joshuagranick.com" target="_blank">Joshua Granick</a> is a true opensource developer. He created <a href="https://github.com/jgranick/buildhx" target="_blank">buildhx</a> which helps to generate externs for native libraries.</p>
-<p>I could explain it more, but I am not that motivated Haxe developer.</p>
-<p>Read more about the subject and I wish you good luck:</p>
-<ul>
-<li><a href="https://github.com/jgranick/buildhx" target="_blank">https://github.com/jgranick/buildhx</a></li>
-<li><a href="http://www.joshuagranick.com/2011/10/14/use-buildjs-to-make-externs-for-haxe-js-automatically/" target="_blank">http://www.joshuagranick.com/2011/10/14/use-buildjs-to-make-externs-for-haxe-js-automatically/</a></li>
-</ul>
-<h2 id="must-read">Must read</h2>
-<p>Phillippe Elsass wrote an article about this subject which is very good and explains what you can do with Haxe and external js-libraries.
-He describes 3 methodes and this document only describes number 3.</p>
-<p>Check it out: <a href="http://philippe.elsass.me/2014/11/haxe-working-with-javascript-libraries/" target="_blank">http://philippe.elsass.me/2014/11/haxe-working-with-javascript-libraries/</a></p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="http://haxe.org/manual/target-javascript-external-libraries.html" target="_blank">http://haxe.org/manual/target-javascript-external-libraries.html</a></li>
-<li><a href="http://old.haxe.org/doc/js/extern_libraries" target="_blank">http://old.haxe.org/doc/js/extern_libraries</a></li>
-</ul>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/09expose/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-exposing-haxe-classes-for-javascript">About exposing Haxe classes for JavaScript</h1>
+<p>This subject is covered in the <a href="http://haxe.org/manual/target-javascript-expose.html" target="_blank">Haxe Manuel</a> in greater detail, but I want to mention it here to be complete in my documentation.</p>
+<p>Sometimes you need to make Haxe classes or static fields available for usage in plain JavaScript.
+You can do this with <code>@expose</code> metadata</p>
+<p>I want to mentioned this here, because using Haxe doesn&apos;t mean nobody can use your code!.
+It&apos;s quite simple.</p>
 
                     
                     </section>
@@ -833,10 +812,10 @@ He describes 3 methodes and this document only describes number 3.</p>
         </div>
 
         
-        <a href="../03vanillajs/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
+        <a href="../08json/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../05externs/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
+        <a href="../09expose/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

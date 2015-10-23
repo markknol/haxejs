@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Example Externs | Haxe and JavaScript</title>
+        <title>How to | Haxe and JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../05externs/example.html" />
+    <link rel="next" href="../follow.html" />
     
     
-    <link rel="prev" href="../03vanillajs/example.html" />
+    <link rel="prev" href="../09expose/about.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="8" data-basepath=".." data-revision="Fri Oct 23 2015 22:27:38 GMT+0200 (CEST)">
+    <div class="book" data-level="12.1" data-basepath=".." data-revision="Fri Oct 23 2015 22:27:38 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -391,7 +391,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="8" data-path="05externs/about.html">
+        <li class="chapter " data-level="8" data-path="05externs/about.html">
             
                 
                     <a href="../05externs/about.html">
@@ -551,7 +551,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="12.1" data-path="09expose/example.html">
+        <li class="chapter active" data-level="12.1" data-path="09expose/example.html">
             
                 
                     <a href="../09expose/example.html">
@@ -796,33 +796,121 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/05externs/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-generating-externs">About generating externs</h1>
-<p>If you need to readup on this subject I would suggest you read <a href="../haxejs/externs.html">Your Favorites, Extended</a>.
-It explains what externs are, how they work, etc.</p>
-<h2 id="warning">Warning</h2>
-<p>Although its possible to generate JavaScript externs I would advice to google first if someone did the heavy lifting already. Google <strong>haxelib nameOfTheLib</strong> or <strong>haxe nameOfTheLib</strong></p>
-<p>And as a last warning I quote Phillippe Elsass:</p>
-<blockquote>
-<p>But how do you write externs for complex libraries if they doesn&#x2019;t exist already? Sadly the answer is: with great courage, patience and a lot of free time... Although it is possible to fully automate the process, it is more often entirely manual.
-I won&#x2019;t recommend you to jump right away on creating externs for a big JS library out there, especially if you aren&#x2019;t an experienced and motivated Haxe developer: creating and keeping up to date such definitions require dedication; there is nothing more frustrating that discovering out of date (or incorrect) ones.</p>
-</blockquote>
-<h2 id="automated-proces">Automated proces</h2>
-<p>The awesome <a href="http://www.openfl.org/" target="_blank">Openfl</a> developer <a href="http://www.joshuagranick.com" target="_blank">Joshua Granick</a> is a true opensource developer. He created <a href="https://github.com/jgranick/buildhx" target="_blank">buildhx</a> which helps to generate externs for native libraries.</p>
-<p>I could explain it more, but I am not that motivated Haxe developer.</p>
-<p>Read more about the subject and I wish you good luck:</p>
-<ul>
-<li><a href="https://github.com/jgranick/buildhx" target="_blank">https://github.com/jgranick/buildhx</a></li>
-<li><a href="http://www.joshuagranick.com/2011/10/14/use-buildjs-to-make-externs-for-haxe-js-automatically/" target="_blank">http://www.joshuagranick.com/2011/10/14/use-buildjs-to-make-externs-for-haxe-js-automatically/</a></li>
-</ul>
-<h2 id="must-read">Must read</h2>
-<p>Phillippe Elsass wrote an article about this subject which is very good and explains what you can do with Haxe and external js-libraries.
-He describes 3 methodes and this document only describes number 3.</p>
-<p>Check it out: <a href="http://philippe.elsass.me/2014/11/haxe-working-with-javascript-libraries/" target="_blank">http://philippe.elsass.me/2014/11/haxe-working-with-javascript-libraries/</a></p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="http://haxe.org/manual/target-javascript-external-libraries.html" target="_blank">http://haxe.org/manual/target-javascript-external-libraries.html</a></li>
-<li><a href="http://old.haxe.org/doc/js/extern_libraries" target="_blank">http://old.haxe.org/doc/js/extern_libraries</a></li>
-</ul>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/09expose/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="example-exposing-haxe-classes-for-javascript">Example exposing Haxe classes for JavaScript</h1>
+<p>So you want to write a library so others can use you code? Sure that is possible in Haxe... <strong>easily</strong>!</p>
+<p><em>The code used in this example can be found <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/09expose/code" target="_blank">here</a>.</em></p>
+<h2 id="how-to-start">How to start</h2>
+<p>Create a folder named <strong><a href="../GLOSSARY.html#foobar" class="glossary-term" title="The terms foobar, fubar, or foo, bar, baz and qux (alternatively, quux) and sometimes norf and many others are sometimes used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.">foobar</a></strong> (please use a better name; any name will do) and create folders <strong>bin</strong> and <strong>src</strong>.
+See example below:</p>
+<pre><code>+ foobar
+    + bin
+    + src
+        - Main.hx
+    - javascript.hxml
+</code></pre><h2 id="the-main-hx">The Main.hx</h2>
+<p>I am not going to write something difficult here, you eventually will. But this is will inform you about how to share you code.</p>
+<pre><code>class MyClass 
+{
+    var name:String;
+
+    function new(name:String) {
+        this.name = name;
+    }
+
+    public function foo() {
+        return &apos;Greetings from $name!&apos;;
+    }
+
+}
+</code></pre><p>Normally I would go into the <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a> description. But for this example I guess you know this already.
+(don&apos;t worry you can find it <a href="#hxml">here</a> )</p>
+<p>And not sure how to build the Haxe file into JavaScript, <a href="#build">check this</a></p>
+<p>When we export this class to JavaScript it will be transpiled into:</p>
+<pre><code>(function (console) { &quot;use strict&quot;;
+var MyClass = function(name) {
+    this.name = name;
+};
+MyClass.prototype = {
+    foo: function() {
+        return &quot;Greetings from &quot; + this.name + &quot;!&quot;;
+    }
+};
+})(typeof console != &quot;undefined&quot; ? console : {log:function(){}});
+</code></pre><p>See, <strong>no</strong> way to access that code.<br>This is great, because you don&apos;t want your code influencing other javascript libraries by accident.</p>
+<p>But what if you want other scripts to use your code?</p>
+<hr>
+<p>To fix that we add <code>@:expose</code> to the class.</p>
+<pre><code>@:expose
+class MyClass 
+{
+    var name:String;
+
+    function new(name:String) {
+        this.name = name;
+    }
+
+    public function foo() {
+        return &apos;Greetings from $name!&apos;;
+    }
+
+}
+</code></pre><p>We look at the generated JavaScript code again:</p>
+<pre><code>(function (console, $hx_exports) { &quot;use strict&quot;;
+var MyClass = $hx_exports.MyClass = function(name) {
+    this.name = name;
+};
+MyClass.prototype = {
+    foo: function() {
+        return &quot;Greetings from &quot; + this.name + &quot;!&quot;;
+    }
+};
+})(typeof console != &quot;undefined&quot; ? console : {log:function(){}}, typeof window != &quot;undefined&quot; ? window : exports);
+</code></pre><p>Huh?</p>
+<p>Let&apos;s add it to an html page, like you normally would.
+And let&apos;s see how we access this script:</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Haxe JS - expose&lt;/title&gt;
+
+    &lt;!-- Your Haxe compiled script --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;MyClass.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        // JavaScript code
+        var instance = new MyClass(&apos;Mark&apos;);
+        console.log(instance.foo()); // logs a message in the console
+    &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Yes, in your browsers console log you will find the correct line: <code>Greetings from Mark!</code></p>
+<hr>
+<p>Not convinced?<br>Remove the @:expose to the class, rebuild the JavaScript and test it in the browser with previous mentioned html.</p>
+<p>You will get:</p>
+<pre><code>Uncaught ReferenceError: MyClass is not defined(anonymous function) @ index.html:12
+</code></pre><p>Nice?</p>
+<p><a name="hxml"></a></p>
+<h2 id="the-haxe-build-file-javascript-hxml">The Haxe build file, javascript.<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a></h2>
+<p>There are a lot of different arguments that you are able to pass to the Haxe compiler.
+These arguments can also be placed into a text file of one per line with the extension <a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>. This file can then be passed directly to the Haxe compiler as a build script.</p>
+<pre><code>-cp src
+-js bin/MyClass.js
+MyClass
+</code></pre><p><a name="build"></a></p>
+<h2 id="build-js-with-haxe">Build js with Haxe</h2>
+<p>To finish and see what we have, build the file and see the result</p>
+<ol>
+<li>Open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a></li>
+<li><code>cd</code> to the correct folder where you have saved the <code>javascript.hxml</code> </li>
+<li>type <code>haxe javascript.hxml</code></li>
+<li>press enter</li>
+</ol>
+<p>You could build everything directly in the <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.
+Alternative names for the terminal:  ">terminal</a>.</p>
+<pre><code>haxe -cp src -main Main -js bin/example.js -dce full
+</code></pre><p>It will have the same result</p>
 
                     
                     </section>
@@ -833,10 +921,10 @@ He describes 3 methodes and this document only describes number 3.</p>
         </div>
 
         
-        <a href="../03vanillajs/example.html" class="navigation navigation-prev " aria-label="Previous page: How to"><i class="fa fa-angle-left"></i></a>
+        <a href="../09expose/about.html" class="navigation navigation-prev " aria-label="Previous page: Example @:expose"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../05externs/example.html" class="navigation navigation-next " aria-label="Next page: How to"><i class="fa fa-angle-right"></i></a>
+        <a href="../follow.html" class="navigation navigation-next " aria-label="Next page: Who to follow"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
