@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>API | Haxe and JavaScript</title>
+        <title>Cheatsheet | Haxe and JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../haxejs/download.html" />
+    <link rel="next" href="../00helloworld/about.html" />
     
     
-    <link rel="prev" href="../haxejs/index.html" />
+    <link rel="prev" href="../haxejs/externs.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Thu Nov 26 2015 14:37:52 GMT+0100 (CET)">
+    <div class="book" data-level="3.5" data-basepath=".." data-revision="Thu Nov 26 2015 14:37:52 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -197,7 +197,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="haxejs/api.html">
+        <li class="chapter " data-level="3.2" data-path="haxejs/api.html">
             
                 
                     <a href="../haxejs/api.html">
@@ -242,7 +242,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="haxejs/cheatsheet.html">
+        <li class="chapter active" data-level="3.5" data-path="haxejs/cheatsheet.html">
             
                 
                     <a href="../haxejs/cheatsheet.html">
@@ -811,29 +811,282 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/haxejs/api.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h2 id="haxe-js-api">Haxe JS API</h2>
-<p>You can find more information regarding the core language API, here: <a href="http://api.haxe.org/js/" target="_blank">http://api.haxe.org/js/</a></p>
-<h2 id="haxe-org-javascript">haxe.org JavaScript</h2>
-<p>Read more about Haxe and JavaScript in the manual:
-<a href="http://haxe.org/manual/target-javascript.html" target="_blank">http://haxe.org/manual/target-javascript.html</a></p>
-<h2 id="javascript">Javascript?</h2>
-<p>Javascript itself is beyond the scope of this resource - it is assumed that you already are familiar with it, and you are here to learn about the Haxe JavaScript target.</p>
-<p>The following resources are worth checking out as a refresher:</p>
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/haxejs/cheatsheet.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="cheat-sheet">Cheat Sheet</h1>
+<p>This document aims to give developers familiar with JavaScript a quickstart to Haxe. For more Haxe specific documentation please refer to the main Haxe.org website:</p>
 <ul>
-<li><a href="http://learnxinyminutes.com/docs/javascript/" target="_blank">http://learnxinyminutes.com/docs/javascript/</a></li>
-<li><a href="http://www.w3schools.com/js/default.asp" target="_blank">http://www.w3schools.com/js/default.asp</a></li>
-<li><a href="https://www.gitbook.com/book/gitbookio/javascript/details" target="_blank">https://www.gitbook.com/book/gitbookio/javascript/details</a></li>
+<li><a href="http://haxe.org/ref/syntax" target="_blank">Haxe Syntax</a></li>
+<li><a href="http://haxe.org/ref" target="_blank">Haxe Language Reference</a></li>
 </ul>
-<p>All you learn from these resources about JavaScript is appliable here! </p>
-<h2 id="javascript-externs">Javascript Externs</h2>
-<p>Most of the externs can be found on <a href="http://lib.haxe.org/" target="_blank">haxelib</a>.<br>Just check under the tag <a href="http://lib.haxe.org/t/js/" target="_blank">&quot;js&quot;</a> (not all libs metioned there are externs) of <a href="http://lib.haxe.org/t/extern" target="_blank">&quot;extern&quot;</a> (not all libs mentioned there are js externs)</p>
-<p>In general, the API in Haxe will mirror the original API in Javascript, but sometimes there are minor differences.<br>If you have any questions, please get in contact with the maintainer of the lib. We are glad to help however we can!</p>
-<h4 id="for-example">For example</h4>
-<p>A very popular JavaScript library is pixi.js.  </p>
-<p>The pixi.js extern can be downloaded via:</p>
-<pre><code>haxelib install pixijs
-</code></pre><p>And if you visit the page on <a href="http://lib.haxe.org/p/pixijs/" target="_blank">lib.haxe.org</a> you can read more about the pixijs extern.<br><strong>For example:</strong> the maintainer is <a href="http://lib.haxe.org/u/adireddy" target="_blank">Adi Reddy Mora aka adireddy</a>, how to install it (haxelib) where the original open source files are located (<a href="https://github.com/pixijs/pixi-haxe" target="_blank">github</a>), instructions and lots more.</p>
+<h4 id="additional-features">Additional Features</h4>
+<p>Haxe includes support for:</p>
+<ul>
+<li><a href="http://haxe.org/manual/types-enum-instance.html" target="_blank">Enums</a></li>
+<li><a href="http://Haxe.org/manual/type-system-type-parameters.html" target="_blank">Type parameters</a></li>
+<li><a href="http://Haxe.org/manual/types.html" target="_blank">Strong Typing</a> </li>
+<li><a href="http://haxe.org/manual/lf-iterators.html" target="_blank">Iterators</a></li>
+<li><a href="http://Haxe.org/manual/lf-condition-compilation.html" target="_blank">Conditional compilation</a> </li>
+<li><a href="http://Haxe.org/manual/class-field-inline.html" target="_blank">Inlining</a> </li>
+<li>and more! (<a href="index.html">check here</a>)</li>
+</ul>
+<hr>
+<h3 id="haxe-amp-javascript-common-syntax-comparison">Haxe &amp; JavaScript common syntax comparison</h3>
+<p>This guide is based off from <a href="http://www.openfl.org/archive/developer/documentation/actionscript-developers/" target="_blank">OpenFL&apos;s guide</a> and <a href="http://haxeflixel.com/documentation/as3-and-haxe-comparison/" target="_blank">HaxeFlixel&apos;d guide</a>.</p>
+<hr>
+<!--
 
+## Basic Types
+
+**JavaScript**
+
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects>
+
+
+1 Boolean  `var x = true;`
+3 Number
+    - number `var number = 10;`
+    - float `var float = 10.1;`
+    - int `var int = Math.floor( 10 );`
+4 Object `var o = new Object(); // var o = {};`
+5 void `void function foobar(){}`
+6 Array `var array = new Array(); // var array = [];`
+
+
+
+**Haxe**
+
+1 Bool
+2 Int `var intvalue : Int = 10; // var ten = 10;`
+3 Number
+    - `var number = 10; // var number : Float = 10;`
+    - `var float = 10.1; // var float : Float = 10.1;`
+    - `var int = 10; // var int : Int = 10;`
+4 Dynamic `var o:Dynamic = {}`
+5 Void `function foobar():Void{}`
+6 Array<Dynamic> `var array = new Array<Dynamic>();`
+
+-->
+<h2 id="package-declarations">Package Declarations</h2>
+<p><strong>JavaScript</strong></p>
+<p>CommonJS vs AMD vs ES2015 module</p>
+<pre><code>need example
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>package com.example.myapplication;
+</code></pre><h2 id="defining-a-class">Defining a Class</h2>
+<p><strong>JavaScript</strong></p>
+<p>prototypal inheritance </p>
+<pre><code>need example
+</code></pre><p><strong>Haxe</strong></p>
+<p>classical inheritance</p>
+<pre><code>class MyClass {
+
+    public function new () {
+
+    }
+
+}
+</code></pre><h2 id="loops">Loops</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>// (classic C-style for-loop)
+for (i = 0; i &lt; 100; i++) {
+
+}
+
+for each (value in items) {
+
+}
+
+for (propertyName in object) {
+
+}
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>// (iterator based for-loop)
+for (i in 0...100) {
+
+}
+
+for (value in items) {
+
+}
+
+var fields = Reflect.fields (object);
+for (propertyName in fields) {
+
+}
+</code></pre><h2 id="logging">Logging</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>console.log(&quot;hello world&quot;);
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>trace(&quot;hello world&quot;);
+</code></pre><h2 id="switch-statements">Switch Statements</h2>
+<p><strong>JavaScript</strong><br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch</a></p>
+<pre><code>switch (value) 
+{
+    case 1:
+        console.log (&quot;Equal to 1&quot;);
+        break;
+   default:
+        console.log (&quot;Not equal to 1&quot;);
+      break;
+
+}
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>switch (value) 
+{
+   case 1:
+      trace (&quot;Equal to 1&quot;);
+
+   default:
+      trace (&quot;Not equal to 1&quot;);
+
+}
+</code></pre><h2 id="type-inference">Type Inference</h2>
+<p><strong>JavaScript</strong><br>Dynamic typing</p>
+<pre><code>var hi = &quot;Hello World&quot;;
+console.log ( typeof hi );
+// type is &quot;String&quot;
+hi = 1;
+console.log ( typeof hi );
+// type is &quot;Number&quot;
+</code></pre><p><strong>Haxe</strong><br>Static typing</p>
+<pre><code>var hi = &quot;Hello World&quot;;
+$type (hi); // Warning : String
+// type is String
+// even works for code completion
+hi = 1; // Int should be String
+// will not compile
+</code></pre><h2 id="type-casting">Type Casting</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>var car:Car = vehicle as Car;
+
+var toString:String = String (10);
+var toNumber:Number = Number (&quot;10&quot;);
+var toInteger:int = int (10.1);
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>var car:Car = cast vehicle;
+
+// or for a safe cast:
+
+var car = cast (vehicle, Car);
+
+var toString = Std.string (10);
+var toNumber = Std.parseFloat (&quot;10&quot;);
+var toInteger = Std.int (10.1);
+</code></pre><h2 id="checking-for-null">Checking for Null</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>if (object == null) {
+
+}
+
+if (!object) {
+
+}
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>if (object == null) {
+
+}
+</code></pre><h2 id="hash-tables">Hash Tables</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>var table  = new Object (); // or just {}
+table[&quot;key&quot;] = 100;
+
+console.log (table.hasOwnProperty (&quot;key&quot;));
+
+for (var key in table) {
+
+   trace (key + &quot; = &quot; + table[key]);
+
+}
+
+delete table[&quot;key&quot;];
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>var table = new Map&lt;String, Int&gt; ();
+table.set (&quot;key&quot;, 100);
+
+trace (table.exists (&quot;key&quot;));
+
+for (key in table.keys ()) 
+{
+    trace (key + &quot; = &quot; + table.get (key));
+}
+
+table.remove (&quot;key&quot;);
+</code></pre><h2 id="rest-parameters">Rest Parameters</h2>
+<p><strong>JavaScript</strong></p>
+<p><a href="https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank">https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Functions/rest_parameters</a></p>
+<pre><code>function test (...params):void {
+
+}
+
+test (1, 2, 3);
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>function test (params:Array&lt;Dynamic&gt;) {
+
+}
+
+Reflect.makeVarArgs (test) (1, 2, 3);
+</code></pre><!-- 
+
+Reflection
+AS3
+
+var foo = object["foo"];
+
+bar.apply (this, [ "hi" ]);
+
+
+Haxe
+
+var foo = Reflect.field (object, "foo");
+
+Reflect.callMethod (this, bar, [ "hi" ]);
+
+-->
+<h2 id="function-types">Function Types</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>function hello (msg:String):void {
+
+}
+
+var type:Function = hello;
+</code></pre><p>Haxe</p>
+<pre><code>function hello (msg:String):Void {
+
+}
+
+var type:String-&gt;Void = hello;
+
+// can also use Dynamic
+</code></pre><h2 id="getters-and-setters">Getters and Setters</h2>
+<p><strong>JavaScript</strong></p>
+<pre><code>var lost = {
+    loc : &quot;Island&quot;,
+    get location () {
+        return this.loc;
+    },
+    set location(val) {
+        this.loc = val;
+    }
+};
+console.log(lost.location); // will return &quot;Island&quot;
+lost.location = &quot;Another island&quot;;
+console.log(lost.location); // will now return &quot;Another island&quot;
+</code></pre><p><strong>Haxe</strong></p>
+<pre><code>public var location(get_location, set_location):String;
+private var _location:String = &quot;Island&quot;;
+
+function get_location():String {
+    return _location;
+}
+function set_location(value:String):String {
+    return _location = value;
+}
+
+....
+
+trace(location); // will return &quot;Island&quot;
+location = &quot;Another island&quot;;
+trace(location); // will now return &quot;Another island&quot;
+</code></pre>
                     
                     </section>
                 
@@ -843,10 +1096,10 @@
         </div>
 
         
-        <a href="../haxejs/index.html" class="navigation navigation-prev " aria-label="Previous page: Home"><i class="fa fa-angle-left"></i></a>
+        <a href="../haxejs/externs.html" class="navigation navigation-prev " aria-label="Previous page: Externs"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../haxejs/download.html" class="navigation navigation-next " aria-label="Next page: Download"><i class="fa fa-angle-right"></i></a>
+        <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

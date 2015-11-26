@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="6.1" data-basepath=".." data-revision="Fri Oct 23 2015 22:27:38 GMT+0200 (CEST)">
+    <div class="book" data-level="6.1" data-basepath=".." data-revision="Thu Nov 26 2015 14:37:52 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -237,6 +237,21 @@
                             <b>3.4.</b>
                         
                         Externs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="haxejs/cheatsheet.html">
+            
+                
+                    <a href="../haxejs/cheatsheet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Cheatsheet
                     </a>
             
             
@@ -816,6 +831,26 @@ See example below:</p>
 <p>But the use of jQuery you can install it using the command:</p>
 <pre><code>haxelib install jQueryExtern
 </code></pre><p>and add <code>-lib jQueryExtern</code> in the .<a href="../GLOSSARY.html#hxml" class="glossary-term" title="Haxe build file">hxml</a>.</p>
+<h2 id="the-index-html">The index.html</h2>
+<p>To understand the examples better, you need to know that the <code>index.html</code> we will be using (<a href="https://github.com/MatthijsKamstra/haxejs/blob/master/02dom/code/bin/index.html" target="_blank">check out the source</a>)
+has a <code>div</code> with <code>class=&quot;container&quot;</code>. </p>
+<pre><code>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Haxe JS - DOM example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+
+&lt;!-- from jQuery&apos;s CDN (http://jquery.com/download/#using-jquery-with-a-cdn) --&gt;
+&lt;script src=&quot;http://code.jquery.com/jquery-2.1.4.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Your Haxe compiled script --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;example.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>Read more about <a href="#cdn">CDN</a> </p>
 <h2 id="the-main-hx">The Main.hx</h2>
 <p>Open your favorite editor, copy/paste the code and save it in the <code>src</code> folder. 
 Check the complete <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/02dom/code/src/Main.hx" target="_blank">Main.hx</a>.</p>
@@ -846,8 +881,6 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) {
 
     var p = document.createParagraphElement();
     p.innerText = &apos;VanillaJs DOM ready&apos;;
-
-    document.querySelector(&quot;.container&quot;).appendChild(p);
 });
 </code></pre><h2 id="question-asked-to-the-community">question asked to the community</h2>
 <p>I was looking for a good <a href="../GLOSSARY.html#dom" class="glossary-term" title="DOM is short for Document Object Model.
@@ -914,7 +947,8 @@ For this example we will use that</p>
 
 &lt;!-- Your Haxe compiled script --&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;Main.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+</code></pre><hr>
+
                     
                     </section>
                 

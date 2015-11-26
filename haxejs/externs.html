@@ -29,7 +29,7 @@
         
     
     
-    <link rel="next" href="../00helloworld/about.html" />
+    <link rel="next" href="../haxejs/cheatsheet.html" />
     
     
     <link rel="prev" href="../haxejs/download.html" />
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.4" data-basepath=".." data-revision="Fri Oct 23 2015 22:27:38 GMT+0200 (CEST)">
+    <div class="book" data-level="3.4" data-basepath=".." data-revision="Thu Nov 26 2015 14:37:52 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -237,6 +237,21 @@
                             <b>3.4.</b>
                         
                         Externs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="haxejs/cheatsheet.html">
+            
+                
+                    <a href="../haxejs/cheatsheet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Cheatsheet
                     </a>
             
             
@@ -826,7 +841,7 @@ DisplayToggle.prototype.show = function() {
 </code></pre><p>Save this file as: <code>DisplayToggle.js</code>.</p>
 <h3 id="using-extern-class">Using: extern class</h3>
 <p>This is the most elegant way, because it is clean and type-safe.
-We create a Haxe file which defines the functions of our external JavaScript library. The extern keywords tells the compiler that the implementation of this class will be available at runtime.</p>
+We create a Haxe file which defines the functions of our external JavaScript library. The extern keyword tells the compiler that the implementation of this class will be available at runtime.</p>
 <pre><code>package ;
 extern class DisplayToggle {
     public function new(id:String):Void;
@@ -836,7 +851,7 @@ extern class DisplayToggle {
 }
 </code></pre><p>Save this code as <code>DisplayToggle.hx</code>.</p>
 <p>Now we can use our external JavaScript directly within Haxe. If you use an IDE with autocompletion you will even get autocompletion using this class.</p>
-<p>Make sure that the <code>DisplayToggle.js</code> is embeded in your HTML file before you add your Haxe generated JavaScript file.</p>
+<p>Make sure that the <code>DisplayToggle.js</code> is embedded in your HTML file before you add your Haxe generated JavaScript file.</p>
 <h3 id="using-untyped">Using: untyped</h3>
 <p>Warning: This is not type-safe. Use this method only if you are quite sure about what you are doing.
 Somewhere in your Haxe code:</p>
@@ -846,10 +861,10 @@ Somewhere in your Haxe code:</p>
         dis.hide();
     }
 }
-</code></pre><p>The <code>__js__</code> function will directly forward the argument string to the generated JavaScript. You can read more about this on the <a href="http://old.haxe.org/doc/advanced/magic" target="_blank">Haxe magic page</a>.
-This way you will get no autocompletion or errors if you try to access a property or function that does not exists.<br>Also make sure that the <code>DisplayToggle.js</code> is embeded in you HTML before your haxe-generated JavaScript file.</p>
+</code></pre><p>The <code>__js__</code> function will forward the argument string directly to the generated JavaScript. You can read more about this on the <a href="http://old.haxe.org/doc/advanced/magic" target="_blank">Haxe magic page</a>.
+This way you will get no autocompletion or errors if you try to access a property or function that does not exist.<br>Also make sure that the <code>DisplayToggle.js</code> is embedded in you HTML before your haxe-generated JavaScript file.</p>
 <h3 id="packages">Packages</h3>
-<p>Some notes about the Haxe package structure. Lets say we have the following file:</p>
+<p>Some notes about the Haxe package structure. Let&apos;s say we have the following file:</p>
 <pre><code>package foo.bar;
 class FooBar {
     public function new() {
@@ -860,7 +875,7 @@ class FooBar {
 <pre><code>foo.bar.FooBar = function() {
     //some code
 }
-</code></pre><p>So if your external library is structured this way you have to recreate the package structure within Haxe.</p>
+</code></pre><p>So if your external library is structured this way, you will need to recreate the package structure within Haxe.</p>
 <p>You may also map your package structure to the external library structure using <code>@:native</code> compiler metadata.</p>
 
                     
@@ -875,7 +890,7 @@ class FooBar {
         <a href="../haxejs/download.html" class="navigation navigation-prev " aria-label="Previous page: Download"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../00helloworld/about.html" class="navigation navigation-next " aria-label="Next page: Example Hello World"><i class="fa fa-angle-right"></i></a>
+        <a href="../haxejs/cheatsheet.html" class="navigation navigation-next " aria-label="Next page: Cheatsheet"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
