@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="11" data-basepath=".." data-revision="Thu Nov 26 2015 14:37:52 GMT+0100 (CET)">
+    <div class="book" data-level="11" data-basepath=".." data-revision="Fri Apr 15 2016 15:35:41 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick instal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -813,9 +828,10 @@
                     
                         <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/08json/about.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="about-loading-a-json">About loading a json</h1>
 <p>A very common way of loading data in your web-app is the use of <code>json</code> files.</p>
-<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> crossplatform </p>
+<p>Haxe can handle <a href="http://api.haxe.org/haxe/Json.html" target="_blank">json</a> cross-platform </p>
 <blockquote>
-<p>Crossplatform JSON API : it will automatically use the optimized native API if available. Use -D haxeJSON to force usage of the Haxe implementation even if a native API is found : this will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
+<p>Crossplatform JSON <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> : it will automatically use the optimized native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> if available.
+Use <code>-D haxeJSON</code> to force usage of the Haxe implementation even if a native <a href="../GLOSSARY.html#api" class="glossary-term" title="API (application program interface) is a set of routines, protocols, and tools for building software applications. The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.">API</a> is found. This will provide extra encoding features such as enums (replaced by their index) and StringMaps.</p>
 </blockquote>
 <h2 id="test-localhost">Test localhost</h2>
 <p>When you load an example locally (when you test your files on your computer instead of a server) you will get an error message:</p>
@@ -823,8 +839,8 @@
 </code></pre><p>To fix that you should open your files via localhost.
 There are many ways to do it, but I will use the Haxe solution <code>Nekoserver</code>.</p>
 <h2 id="neko-web-server">Neko Web Server</h2>
-<p>We will use a not often mentioned feature from Haxe.</p>
-<p>You can run a webserver : <a href="http://old.haxe.org/doc/start/neko#using-the-neko-development-webserver-to-serve-http-requests-whose-contents-are-generated-by-haxe" target="_blank">Neko Web Server</a></p>
+<p>We will use a rarely mentioned feature from Haxe.</p>
+<p>You can run a web-server : <a href="http://old.haxe.org/doc/start/neko#using-the-neko-development-webserver-to-serve-http-requests-whose-contents-are-generated-by-haxe" target="_blank">Neko Web Server</a></p>
 <p>And the cool part is:
 <strong>You don&apos;t have to install anything if you already have Haxe installed.</strong></p>
 <pre><code>Neko Web Server v1.0 - (c)2006-2013 Haxe Foundation
@@ -837,7 +853,7 @@ There are many ways to do it, but I will use the Haxe solution <code>Nekoserver<
 </code></pre><p>You need the path to your files (so replace <code>path/to/files</code> with your own path)<br><em>example:</em> <code>path/to/files/haxejs/07pixi/code/bin/</code></p>
 <pre><code>nekotools server -p 2000 -h localhost -d path/to/files
 </code></pre><p>and open your browser to <a href="http://localhost:2000" target="_blank">http://localhost:2000</a></p>
-<p>You can also start the webserver with it&apos;s defaults (port:2000, host:localhost) </p>
+<p>You can also start the web-server with it&apos;s defaults (port:2000, host:localhost) </p>
 <pre><code>nekotools server
 </code></pre><p>But then you have to visit the configure-page the server by going to <a href="http://localhost:2000/server:config" target="_blank">http://localhost:2000/server:config</a></p>
 <p>(or open your <a href="../GLOSSARY.html#terminal" class="glossary-term" title="The terminal is an interface in which you can type and execute text based commands.

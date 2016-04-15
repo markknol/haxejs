@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="3.4" data-basepath=".." data-revision="Thu Nov 26 2015 14:37:52 GMT+0100 (CET)">
+    <div class="book" data-level="3.4" data-basepath=".." data-revision="Fri Apr 15 2016 15:35:41 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,14 +101,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/installation.html">
+        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+            
+                
+                    <a href="../haxe/quick-install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Quick instal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="haxe/installation.html">
             
                 
                     <a href="../haxe/installation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.1.</b>
+                            <b>2.2.</b>
                         
                         Installation
                     </a>
@@ -116,14 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="haxe/choosing-a-code-editor.html">
+        <li class="chapter " data-level="2.3" data-path="haxe/choosing-a-code-editor.html">
             
                 
                     <a href="../haxe/choosing-a-code-editor.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.2.</b>
+                            <b>2.3.</b>
                         
                         Code editor
                     </a>
@@ -131,14 +146,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="haxe/hello-world.html">
+        <li class="chapter " data-level="2.4" data-path="haxe/hello-world.html">
             
                 
                     <a href="../haxe/hello-world.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         Hello world
                     </a>
@@ -146,14 +161,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="haxe/learn-haxe.html">
+        <li class="chapter " data-level="2.5" data-path="haxe/learn-haxe.html">
             
                 
                     <a href="../haxe/learn-haxe.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Learn Haxe
                     </a>
@@ -813,10 +828,10 @@
                     
                         <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/haxejs/externs.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="your-favorites-extended">Your Favorites, Extended</h1>
 <p><strong>Haxe JS</strong> externs make it possible to extend JavaScript libraries with code completion and other neat features.</p>
-<p>Please feel free and choose one of the libraries to learn more about how <strong>Haxe JS</strong> can improve your everyday workflow.</p>
+<p>Please feel free and choose one of the libraries to learn more about how <strong>Haxe JS</strong> can improve your everyday work-flow.</p>
 <h2 id="haxelib">haxelib</h2>
 <p>Most of the externs listed here are available using &quot;haxelib&quot;, the package manager for <strong>Haxe</strong>.</p>
-<p>You can easily install a library located on haxelib using the &quot;install&quot; command, like this:</p>
+<p>You can install a library located on haxelib using the &quot;install&quot; command, like this:</p>
 <pre><code>haxelib install jQueryExtern  
 haxelib install beanhx  
 </code></pre><h2 id="writing-your-own">Writing Your Own</h2>
@@ -850,10 +865,10 @@ extern class DisplayToggle {
     public var visible(default,null):Bool;
 }
 </code></pre><p>Save this code as <code>DisplayToggle.hx</code>.</p>
-<p>Now we can use our external JavaScript directly within Haxe. If you use an IDE with autocompletion you will even get autocompletion using this class.</p>
+<p>Now we can use our external JavaScript directly within Haxe. If you use an <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a> with autocompletion you will even get auto-completion using this class.</p>
 <p>Make sure that the <code>DisplayToggle.js</code> is embedded in your HTML file before you add your Haxe generated JavaScript file.</p>
 <h3 id="using-untyped">Using: untyped</h3>
-<p>Warning: This is not type-safe. Use this method only if you are quite sure about what you are doing.
+<p>Warning: This is not type-safe. Use this method if you are sure about what you are doing.
 Somewhere in your Haxe code:</p>
 <pre><code>class Main {
     static function main() {
@@ -862,7 +877,7 @@ Somewhere in your Haxe code:</p>
     }
 }
 </code></pre><p>The <code>__js__</code> function will forward the argument string directly to the generated JavaScript. You can read more about this on the <a href="http://old.haxe.org/doc/advanced/magic" target="_blank">Haxe magic page</a>.
-This way you will get no autocompletion or errors if you try to access a property or function that does not exist.<br>Also make sure that the <code>DisplayToggle.js</code> is embedded in you HTML before your haxe-generated JavaScript file.</p>
+This way you will get no auto-completion or errors if you try to access a property or function that does not exist.<br>Also make sure that the <code>DisplayToggle.js</code> is embedded in you HTML before your haxe-generated JavaScript file.</p>
 <h3 id="packages">Packages</h3>
 <p>Some notes about the Haxe package structure. Let&apos;s say we have the following file:</p>
 <pre><code>package foo.bar;
@@ -871,11 +886,11 @@ class FooBar {
         // some code
     }
 }
-</code></pre><p>This class will be compiled to a JavaScript object similar to this:</p>
+</code></pre><p>The compiled class will be a JavaScript object like this:</p>
 <pre><code>foo.bar.FooBar = function() {
     //some code
 }
-</code></pre><p>So if your external library is structured this way, you will need to recreate the package structure within Haxe.</p>
+</code></pre><p>If your external library is structured this way, you will need to recreate the package structure within Haxe.</p>
 <p>You may also map your package structure to the external library structure using <code>@:native</code> compiler metadata.</p>
 
                     

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>How to | Haxe and JavaScript</title>
+        <title>Quick instal | Haxe and JavaScript</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../05externs/about.html" />
+    <link rel="next" href="../haxe/installation.html" />
     
     
-    <link rel="prev" href="../03vanillajs/about.html" />
+    <link rel="prev" href="../haxe/about.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="7.1" data-basepath=".." data-revision="Fri Apr 15 2016 15:35:41 GMT+0200 (CEST)">
+    <div class="book" data-level="2.1" data-basepath=".." data-revision="Fri Apr 15 2016 15:35:41 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -101,7 +101,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1" data-path="haxe/quick-install.html">
+        <li class="chapter active" data-level="2.1" data-path="haxe/quick-install.html">
             
                 
                     <a href="../haxe/quick-install.html">
@@ -401,7 +401,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="7.1" data-path="03vanillajs/example.html">
+        <li class="chapter " data-level="7.1" data-path="03vanillajs/example.html">
             
                 
                     <a href="../03vanillajs/example.html">
@@ -826,89 +826,160 @@
                 
                     <section class="normal" id="section-">
                     
-                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/03vanillajs/example.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="vanillajs"><a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="Is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">VanillaJS</a></h1>
-<p>Check the <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/03vanillajs/code" target="_blank">code folder</a> for more comments.</p>
-<p>I have taken some of the examples for the <a href="http://youmightnotneedjquery.com" target="_blank">http://youmightnotneedjquery.com</a> and converted it to HaxeJS.
-The fadeIn is just a rewrite... couldn&apos;t get it to work the way they did it.</p>
-<p><em>The code used in this example can be found <a href="https://github.com/MatthijsKamstra/haxejs/tree/master/03vanillajs/code" target="_blank">here</a>.</em></p>
-<h2 id="request">Request</h2>
-<p><a href="http://youmightnotneedjquery.com/#request" target="_blank">http://youmightnotneedjquery.com/#request</a>
-How to get information of an server (in this case NASA)</p>
-<p><strong>jQuery</strong></p>
-<pre><code>$.ajax({
-    type: &apos;GET&apos;,
-    url: &apos;https://api.nasa.gov/planetary/apod?concept_tags=True&amp;api_key=DEMO_KEY&apos;,
-    success: function(resp) {
+                        <a id="edit-link" href="https://github.com/MatthijsKamstra/haxejs/blob/master/haxe/quick-install.md" class="btn fa fa-edit pull-left">&nbsp;&nbsp;Edit This Page</a><h1 id="quick-install">Quick install</h1>
+<p>This tutorial is for the TL;DR crowd...
+You just want to get started ... right!</p>
+<p><img src="../img/tldr.gif" alt=""></p>
+<p>Choose your OS:</p>
+<ul>
+<li><a href="#osx">OSX</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#windows">Windows</a> </li>
+</ul>
+<p><strong>At the time of writing, the version is Haxe 3.2.1, but don&apos;t let that stop you when that has changed</strong></p>
+<p><a name="osx"></a></p>
+<h1 id="osx">OSX</h1>
+<h2 id="step-0-you-have-joined-an-elite-haxe-force">Step 0: You have joined an elite Haxe force!</h2>
+<p>You are cooler then a polar bear!</p>
+<h2 id="step-1-install-haxe">Step 1: Install Haxe</h2>
+<p>You can find installers and binaries for Windows, OS X and Linux on <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a>.</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-2-install-editor">Step 2: Install Editor</h2>
+<p>You need an editor, lets install <strong>Visual Studio Code</strong></p>
+<p><img src="https://code.visualstudio.com/home-screenshot-mac-lg.png" alt="Visual Studio Code"></p>
+<p>On the homepage of <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> find the button called &quot;Download for OSX&quot; (it right in your face, big button).</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-3-install-vscode-haxe-language-extension">Step 3: Install VSCode - Haxe Language Extension</h2>
+<p>To get VSCode working with Haxe you need to install the &quot;Haxe Language Extension&quot;</p>
+<p>(<a href="https://marketplace.visualstudio.com/items?itemName=haxedevs.haxe" target="_blank">vscode-haxe</a>)</p>
+<ul>
+<li>Launch VS Code</li>
+<li>Quick Open (&#x2318;+P)</li>
+<li>Paste the following command: <code>ext install haxe</code></li>
+<li>And type enter</li>
+</ul>
+<h2 id="step-4-extra-install-haxelib-libraries">Step 4 (extra): Install haxelib libraries</h2>
+<p>This is not necessary but something you eventually need to do.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following</li>
+</ul>
+<pre><code>haxelib install hxnodejs
+haxelib install jQueryExtern
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git haxelib
+haxelib install markdown
+haxelib install msignal
+</code></pre><h2 id="step-5-extra-install-npm-node-js">Step 5 (Extra): Install NPM/Node.js</h2>
+<p>Download Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<p>Now you have access to NPM.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following (and see current NPM version)</li>
+</ul>
+<pre><code>npm -v
+</code></pre><p><a name="linux"></a></p>
+<h1 id="linux">Linux</h1>
+<h2 id="step-0-you-have-joined-an-elite-haxe-force">Step 0: You have joined an elite Haxe force!</h2>
+<p>You are cooler then a polar bear!</p>
+<h2 id="step-1-install-haxe">Step 1: Install Haxe</h2>
+<p>You can find installers and binaries for Windows, OS X and Linux on <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a>.</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-2-install-editor">Step 2: Install Editor</h2>
+<p>You need an editor, lets install <strong>Visual Studio Code</strong></p>
+<p><img src="https://code.visualstudio.com/home-screenshot-mac-lg.png" alt="Visual Studio Code"></p>
+<p>On the homepage of <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> find the button called &quot;Download&quot; (its right in your face, big button).</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-3-install-vscode-haxe-language-extension">Step 3: Install VSCode - Haxe Language Extension</h2>
+<p>To get VSCode working with Haxe you need to install the &quot;Haxe Language Extension&quot;</p>
+<p>(<a href="https://marketplace.visualstudio.com/items?itemName=haxedevs.haxe" target="_blank">vscode-haxe</a>)</p>
+<ul>
+<li>Launch VS Code</li>
+<li>Quick Open (&#x2318;+P)</li>
+<li>Paste the following command: <code>ext install haxe</code></li>
+<li>And type enter</li>
+</ul>
+<h2 id="step-4-extra-install-haxelib-libraries">Step 4 (extra): Install haxelib libraries</h2>
+<p>This is not necessary but something you eventually need to do.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following</li>
+</ul>
+<pre><code>haxelib install hxnodejs
+haxelib install jQueryExtern
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git haxelib
+haxelib install markdown
+haxelib install msignal
+</code></pre><h2 id="step-5-extra-install-npm-node-js">Step 5 (Extra): Install NPM/Node.js</h2>
+<p>Download Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<p>Now you have access to NPM.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following (and see current NPM version)</li>
+</ul>
+<pre><code>npm -v
+</code></pre><p><a name="windows"></a></p>
+<h1 id="windows">Windows</h1>
+<h2 id="step-0-you-have-joined-an-elite-haxe-force">Step 0: You have joined an elite Haxe force!</h2>
+<p>You are cooler then a polar bear!</p>
+<h2 id="step-1-install-haxe">Step 1: Install Haxe</h2>
+<p>You can find installers and binaries for Windows, OS X and Linux on <a href="http://haxe.org/download/" target="_blank">http://haxe.org/download/</a>.</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-2-install-editor">Step 2: Install Editor</h2>
+<p>You need an <a href="../GLOSSARY.html#ide" class="glossary-term" title="An **integrated development environment** (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have intelligent code completion. ">IDE</a>, install <strong>HaxeDevelop</strong></p>
+<p><img src="http://haxedevelop.org/img/haxedevelop-interface.jpg" alt=""></p>
+<p>On the homepage of <a href="http://www.haxedevelop.org" target="_blank">HaxeDevelop</a> find the button called &quot;Download&quot; (its right in your face, big button).</p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<h2 id="step-3-extra-install-haxelib-libraries">Step 3 (extra): Install haxelib libraries</h2>
+<p>This is not necessary but something you eventually need to do.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following</li>
+</ul>
+<pre><code>haxelib install hxnodejs
+haxelib install jQueryExtern
+haxelib git js-kit https://github.com/clemos/haxe-js-kit.git haxelib
+haxelib install markdown
+haxelib install msignal
+</code></pre><h2 id="step-4-extra-install-npm-node-js">Step 4 (Extra): Install NPM/Node.js</h2>
+<p>Download Node.js: get your version here: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+<ul>
+<li>Download </li>
+<li>And install</li>
+</ul>
+<p>Now you have access to NPM.</p>
+<ul>
+<li>Open <code>terminal</code></li>
+<li>Copy and past the following (and see current NPM version)</li>
+</ul>
+<pre><code>npm -v
+</code></pre><hr>
 
-    },
-    error: function() {
-
-    }
-});
-</code></pre><p><strong><a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="Is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">vanillaJS</a></strong>
-(IE9+)</p>
-<pre><code>// ajax call
-var request = new js.html.XMLHttpRequest();
-request.open(&apos;GET&apos;, &apos;https://api.nasa.gov/planetary/apod?concept_tags=True&amp;api_key=DEMO_KEY&apos;, true);
-
-request.onload = function() {
-    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 400) {
-        // Success!
-        var json = request.responseText;
-        trace( &quot;json: &quot; + json );
-    } else {
-        // We reached our target server, but it returned an error
-        trace(&quot;oeps: status: &quot; + request.status + &quot; // json: &quot; + request.responseText);
-
-    }
-};
-
-request.onerror = function() {
-    // There was a connection error of some sort
-    trace(&quot;error&quot;);
-};
-
-request.send();
-</code></pre><h2 id="fadein">FadeIn</h2>
-<p><a href="http://youmightnotneedjquery.com/#fade_in" target="_blank">http://youmightnotneedjquery.com/#fade_in</a>
-This one is totally different from the code used on the website. I couldn&apos;t get it to work the way they desribed.</p>
-<p><strong>jQuery</strong></p>
-<pre><code>$(el).fadeIn();
-</code></pre><p><strong><a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="Is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">vanillaJS</a></strong>
-(IE9+)</p>
-<pre><code>// somewhere in your code
-fadeIn(el);
-
-// fade
-private function fadeIn(pElement:js.html.Element, ?pOpacity:Float ) 
-{
-    if(pOpacity == null){
-        pOpacity = 0;
-    } else {
-        pOpacity += 0.1;
-    }
-    pElement.style.opacity = Std.string (pOpacity);
-    if (pOpacity &lt; 1) {
-        haxe.Timer.delay(function () { this.fadeIn(pElement,pOpacity); },100);
-    } else {
-        trace( &quot;Stop fadein&quot;  );
-    }
-}
-</code></pre><h2 id="click">Click</h2>
-<p>An example how to write it in plain JavaScript</p>
-<p><strong>jQuery</strong></p>
-<pre><code>$(&quot;.btnclass&quot;).click(function(){
-    alert(&quot;this is a test&quot;);
-});
-</code></pre><p><strong><a href="../GLOSSARY.html#vanillajs" class="glossary-term" title="Is a name to refer to using plain JavaScript without any additional libraries like jQuery. People use it as a joke to remind other developers that many things can be done nowadays without the need for additional JavaScript libraries.">vanillaJS</a></strong></p>
-<pre><code>var _doc = js.Browser.document;
-var _win = js.Browser.window;
-var _btn = _doc.getElementsByClassName(&quot;btnclass&quot;)[0]; // select the first one
-// onclick
-_btn.addEventListener(&apos;click&apos;, function() {
-    _win.alert(&apos;this is a test&apos;);
-}, false);
-</code></pre>
                     
                     </section>
                 
@@ -918,10 +989,10 @@ _btn.addEventListener(&apos;click&apos;, function() {
         </div>
 
         
-        <a href="../03vanillajs/about.html" class="navigation navigation-prev " aria-label="Previous page: Example VanillaJS"><i class="fa fa-angle-left"></i></a>
+        <a href="../haxe/about.html" class="navigation navigation-prev " aria-label="Previous page: Haxe basics"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../05externs/about.html" class="navigation navigation-next " aria-label="Next page: Example Externs"><i class="fa fa-angle-right"></i></a>
+        <a href="../haxe/installation.html" class="navigation navigation-next " aria-label="Next page: Installation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
